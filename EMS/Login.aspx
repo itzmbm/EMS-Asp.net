@@ -26,7 +26,7 @@
     <div class="nav">
         <ul class="navv">
             <span class="nimg">
-                <li class="li"><img src="images/Employee.png" style="width: 350px;height: 70px;margin-top: 05px;margin-left: 10px;"><span style="color: white;text-align: center;"></li>
+                <li class="li"><img src="images/Employee.png" style="width: 350px;height: 70px;margin-top: 05px;margin-left: 10px;"><span style="color: white;text-align: center;"></span></li>
             </span>
             <div class="menu">
                 <li class="li"><a class="a" href="index.html">Home</a></li>
@@ -55,8 +55,6 @@
                     <asp:Button ID="lgntbn" CssClass="lgnbtn" runat="server" Text="Login" />
 
                 </div>
-                
-    
         </div>
 
 

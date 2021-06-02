@@ -1,4 +1,7 @@
-﻿body {
+﻿* {
+    box-sizing: border-box;
+}
+body {
     /* margin:0;
             padding: 0;*/
 }
@@ -29,7 +32,7 @@
     float: left;
 }
 
-.a {
+.a{
     display: block;
     color: white;
     text-align: center;
@@ -50,7 +53,7 @@
 
 
 .container {
-    display: flex;
+    displlay: flex;
     align-items: center;
     justify-content: center
 }
