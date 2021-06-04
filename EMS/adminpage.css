@@ -8,46 +8,44 @@
     background-position: center;
 }
 
-.nav * {
-    height: 70px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-}
 
-.menu {
-    margin-left: 734px;
-}
 
-.slide {
-    margin-top: 10px;
-}
-
-.navv {
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #f37437;
+   height:70px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+
 }
 
-.li {
+li {
     float: left;
 }
 
-a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 20px 16px;
-    text-decoration: none;
-}
-
-    /* Change the link color to #111 (black) on hover */
-    a:hover {
-        background-color: white;
-        color: black;
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 23px 16px;
+        text-decoration: none;
     }
 
+        li a:hover:not(.active) {
+            background-color: white;
+            color:black;
+        }
+
+.active {
+    background-color: white;
+    color:black;
+}
+.menu{
+    margin-left:500px;
+}
 .logo {
     width: 150px;
     height: 100px;
@@ -60,29 +58,25 @@ a {
     border: none;
     border-bottom: 2px solid grey;
 }
-.hide{
-    display:none;
-}
-.show{
-    display:flex;
-}
-.addemp {
-   
-    margin-top:80px;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
 
-.adddept{
-    margin-top: 80px;
+.addemp {
+   display:flex;
+    margin-top:40px;
     
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
+.adddept{
+    display:flex;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .addjob {
-    margin-top: 80px;
-   
+    display:flex;
+    margin-top: 50px;
     flex-wrap: wrap;
     justify-content: space-around;
 }

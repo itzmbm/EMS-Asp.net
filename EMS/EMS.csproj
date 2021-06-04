@@ -107,7 +107,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <Content Include="Adminpage.aspx" />
+    <Content Include="Adminadddept.aspx" />
+    <Content Include="Adminaddemp.aspx" />
+    <Content Include="Adminaddjob.aspx" />
+    <Content Include="Admindash.aspx" />
     <Content Include="adminpage.css" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -127,14 +130,8 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="addemp.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>addemp.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </Content>
-    <None Include="addemp.dbml.layout">
-      <DependentUpon>addemp.dbml</DependentUpon>
-    </None>
+    <Content Include="Admin.Master" />
+    <Content Include="Hr.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="index.css" />
     <Content Include="index.html" />
@@ -168,24 +165,46 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
-    <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="addemp.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>addemp.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="Adminpage.aspx.cs">
-      <DependentUpon>Adminpage.aspx</DependentUpon>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Adminpage.aspx.designer.cs">
-      <DependentUpon>Adminpage.aspx</DependentUpon>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Adminadddept.aspx.cs">
+      <DependentUpon>Adminadddept.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adminadddept.aspx.designer.cs">
+      <DependentUpon>Adminadddept.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adminaddemp.aspx.cs">
+      <DependentUpon>Adminaddemp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adminaddemp.aspx.designer.cs">
+      <DependentUpon>Adminaddemp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adminaddjob.aspx.cs">
+      <DependentUpon>Adminaddjob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adminaddjob.aspx.designer.cs">
+      <DependentUpon>Adminaddjob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admindash.aspx.cs">
+      <DependentUpon>Admindash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admindash.aspx.designer.cs">
+      <DependentUpon>Admindash.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
@@ -213,6 +232,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Hr.Master.cs">
+      <DependentUpon>Hr.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hr.Master.designer.cs">
+      <DependentUpon>Hr.Master</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -221,13 +247,6 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Site.Master.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Master.designer.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
     <Compile Include="Site.Mobile.Master.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

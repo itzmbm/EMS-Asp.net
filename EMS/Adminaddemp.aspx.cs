@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace EMS
 {
-    public partial class SiteMaster : MasterPage
+    public partial class Adminaddemp : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

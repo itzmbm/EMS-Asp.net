@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace EMS
 {
-    public partial class Adminpage : System.Web.UI.Page
+    public partial class Admindash : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
