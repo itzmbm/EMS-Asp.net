@@ -7,38 +7,34 @@ using System.Web.UI.WebControls;
 
 namespace EMS
 {
-    public partial class Admin : System.Web.UI.MasterPage
+    public partial class TM : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-     
-
-       
-
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Admindash.aspx");
+            Response.Redirect("TMdash.aspx");
         }
-        protected void LinkButton2_Click1(object sender, EventArgs e)
+        protected void LinkButton2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Adminaddemp.aspx");
+            Response.Redirect("TMleavereq.aspx");
         }
 
         protected void LinkButton3_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Adminadddept.aspx");
+            Response.Redirect("TMapprovedreq.aspx");
         }
-
         protected void LinkButton4_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Adminaddjob.aspx");
+            Response.Redirect("TMrejectedreq.aspx");
         }
         protected void LinkButton5_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Adminaddsal.aspx");
+            Response.Redirect("TMviewemp.aspx");
         }
+
         protected void LinkButton6_Click(object sender, EventArgs e)
         {
             Response.Redirect("Login.aspx");

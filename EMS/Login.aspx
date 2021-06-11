@@ -30,29 +30,28 @@
             </span>
             <div class="menu">
                 <li class="li"><a class="a" href="index.html">Home</a></li>
-                <li class="li"><a class="loginbtn a" href="Login.aspx">Login</a></li>
+                <li class="li"><a class="a" href="Login.aspx">Login</a></li>
                 <li class="li"><a class="a" href="">About us</a></li>
                 <li class="li"><a class="a" href="">Contact us</a></li>
             </div>
         </ul>
     </div>
       
-            <div class="wrapper shadow-lg p-3 mb-5shadow-lg p-3 mb-5 bg-white rounded bg-white rounded opacity: 0.9 ;">
+            <div class="wrapper shadow-lg p-3 mb-5shadow-lg p-3 mb-5 bg-white">
                 <div class="log">
                     <h3>Log in</h3>
                     <hr />
-                    <img src="images/usn.png" class="icon" />&nbsp;<asp:DropDownList ID="DropDownList1" runat="server">
+                    <img src="images/usn.png" class="icon" />&nbsp;<asp:DropDownList ID="usertype" runat="server">
                         <asp:ListItem Value="">Select User type</asp:ListItem> 
-                        <asp:ListItem>Admin</asp:ListItem>
-                        <asp:ListItem>HR</asp:ListItem>
-                        <asp:ListItem>Team Manager</asp:ListItem>
-                        <asp:ListItem>Employee</asp:ListItem>
+                        <asp:ListItem Value="Admin">Admin</asp:ListItem>
+                        <asp:ListItem Value="TM">Team Manager</asp:ListItem>
+                        <asp:ListItem Value="EMP">Employee</asp:ListItem>
                     </asp:DropDownList><br /><br />
-
-                   <img src="images/id.png"  class="icon"/>&nbsp;<asp:TextBox ID="username" runat="server" placeholder="ID"></asp:TextBox><br /><br />
-                     <img src="images/pwd.png"  class="icon"/>&nbsp;<asp:TextBox ID="password" runat="server" placeholder="Password"></asp:TextBox><br /><br />
+                   
+                   <img src="images/id.png"  class="icon"/>&nbsp;<asp:TextBox ID="userid" runat="server" placeholder="user ID"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Username required" ControlToValidate ="userid" style="color:red;"></asp:RequiredFieldValidator><br /><br />
+                     <img src="images/pwd.png"  class="icon"/>&nbsp;<asp:TextBox ID="password" runat="server" placeholder="Password"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Password required" ControlToValidate ="password" style="color:red;"></asp:RequiredFieldValidator><br /><br />
                     <a href="#">Forgot your password?</a><br /><br />
-                    <asp:Button ID="lgntbn" CssClass="lgnbtn" runat="server" Text="Login" />
+                    <asp:Button ID="lgntbn" CssClass="lgnbtn" runat="server" Text="Login" OnClick="lgntbn_Click" />
 
                 </div>
         </div>

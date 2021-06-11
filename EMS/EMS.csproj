@@ -110,6 +110,7 @@
     <Content Include="Adminadddept.aspx" />
     <Content Include="Adminaddemp.aspx" />
     <Content Include="Adminaddjob.aspx" />
+    <Content Include="Adminaddsal.aspx" />
     <Content Include="Admindash.aspx" />
     <Content Include="adminpage.css" />
     <Content Include="Contact.aspx" />
@@ -119,6 +120,12 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
+    <Content Include="emp.css" />
+    <Content Include="EMPapplyleave.aspx" />
+    <Content Include="EMPdash.aspx" />
+    <Content Include="EMPleavestat.aspx" />
+    <Content Include="EMPviewpro.aspx" />
+    <Content Include="EMPviewsal.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -131,7 +138,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Admin.Master" />
-    <Content Include="Hr.Master" />
+    <Content Include="EMP.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="index.css" />
     <Content Include="index.html" />
@@ -165,6 +172,8 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="tm.css" />
+    <Content Include="TMdash.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -199,6 +208,13 @@
     <Compile Include="Adminaddjob.aspx.designer.cs">
       <DependentUpon>Adminaddjob.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Adminaddsal.aspx.cs">
+      <DependentUpon>Adminaddsal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adminaddsal.aspx.designer.cs">
+      <DependentUpon>Adminaddsal.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admindash.aspx.cs">
       <DependentUpon>Admindash.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -229,15 +245,50 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Hr.Master.cs">
-      <DependentUpon>Hr.Master</DependentUpon>
+    <Compile Include="EMP.Master.cs">
+      <DependentUpon>EMP.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Hr.Master.designer.cs">
-      <DependentUpon>Hr.Master</DependentUpon>
+    <Compile Include="EMP.Master.designer.cs">
+      <DependentUpon>EMP.Master</DependentUpon>
+    </Compile>
+    <Compile Include="EMPapplyleave.aspx.cs">
+      <DependentUpon>EMPapplyleave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EMPapplyleave.aspx.designer.cs">
+      <DependentUpon>EMPapplyleave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EMPdash.aspx.cs">
+      <DependentUpon>EMPdash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EMPdash.aspx.designer.cs">
+      <DependentUpon>EMPdash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EMPleavestat.aspx.cs">
+      <DependentUpon>EMPleavestat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EMPleavestat.aspx.designer.cs">
+      <DependentUpon>EMPleavestat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EMPviewpro.aspx.cs">
+      <DependentUpon>EMPviewpro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EMPviewpro.aspx.designer.cs">
+      <DependentUpon>EMPviewpro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EMPviewsal.aspx.cs">
+      <DependentUpon>EMPviewsal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EMPviewsal.aspx.designer.cs">
+      <DependentUpon>EMPviewsal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -253,6 +304,20 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TM.Master.cs">
+      <DependentUpon>TM.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TM.Master.designer.cs">
+      <DependentUpon>TM.Master</DependentUpon>
+    </Compile>
+    <Compile Include="TMdash.aspx.cs">
+      <DependentUpon>TMdash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TMdash.aspx.designer.cs">
+      <DependentUpon>TMdash.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -270,6 +335,7 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="TM.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

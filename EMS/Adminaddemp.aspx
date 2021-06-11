@@ -1,9 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Adminaddemp.aspx.cs" Inherits="EMS.Adminaddemp" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" href="adminpage.css">
+    
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <link rel="stylesheet" href="adminpage.css">
+   
       <!--add--->
        <div class="addemp" >
          <div class="wrapper shadow-lg p-3 mb-5 bg-white rounded">

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace EMS
 {
-    public partial class Hr : System.Web.UI.MasterPage
+    public partial class EMPleavestat : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

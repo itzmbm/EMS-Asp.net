@@ -4,7 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using System.Data;
+using System.Data.SqlClient;
 namespace EMS
 {
     public partial class Login : System.Web.UI.Page
@@ -13,5 +14,79 @@ namespace EMS
         {
 
         }
+
+
+        protected void lgntbn_Click(object sender, EventArgs e)
+        {
+           
+            SqlConnection con = new SqlConnection(@"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = emp; Integrated Security = True;");
+            try
+            {
+                string uid = userid.Text;
+                string pass = password.Text;
+                string ut = usertype.SelectedItem.Value.ToString();
+                if (ut.Equals("Admin")) 
+                {
+                    con.Open();
+                    string qry = "select * from adminlog where username='" + uid + "' and password='" + pass + "'";
+                    SqlCommand cmd = new SqlCommand(qry, con);
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    if (sdr.Read())
+                    {
+                        Response.Redirect("Admindash.aspx");
+                    }
+                    else
+                    {
+                        Response.Write("<script language='javascript'>alert('UserId & Password Is not correct Try again..!!');</script>");
+
+                    }
+                    con.Close();
+                }
+                else if (ut.Equals("TM"))
+                {
+                    con.Open();
+                    string qry = "select * from tmlog where username='" + uid + "' and password='" + pass + "'";
+                    SqlCommand cmd = new SqlCommand(qry, con);
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    if (sdr.Read())
+                    {
+                        Response.Redirect("TMdash.aspx");
+                    }
+                    else
+                    {
+                        Response.Write("<script language='javascript'>alert('UserId & Password Is not correct Try again..!!');</script>");
+
+                    }
+                    con.Close();
+                }
+                else if (ut.Equals("EMP"))
+                {
+                    con.Open();
+                    string qry = "select * from emplog where userid='" + uid + "' and password='" + pass + "'";
+                    SqlCommand cmd = new SqlCommand(qry, con);
+                    SqlDataReader sdr = cmd.ExecuteReader();
+                    if (sdr.Read())
+                    {
+                        Response.Redirect("EMPdash.aspx");
+                    }
+                    else
+                    {
+                        Response.Write("<script language='javascript'>alert('UserId & Password Is not correct Try again..!!');</script>");
+
+                    }
+                    con.Close();
+                }
+                else
+                {
+                    Response.Write("<script language='javascript'>alert('Please a Select a user type');</script>");
+                }
+            }
+            catch (Exception ex)
+            {
+                Response.Write(ex.Message);
+            }
+        }
+
     }
+    
 }
