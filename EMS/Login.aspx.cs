@@ -45,7 +45,7 @@ namespace EMS
                 else if (ut.Equals("TM"))
                 {
                     con.Open();
-                    string qry = "select * from tmlog where username='" + uid + "' and password='" + pass + "'";
+                    string qry = "select * from emplog where userid='" + uid + "' and password='" + pass + "'";
                     SqlCommand cmd = new SqlCommand(qry, con);
                     SqlDataReader sdr = cmd.ExecuteReader();
                     if (sdr.Read())

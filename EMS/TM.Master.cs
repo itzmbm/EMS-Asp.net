@@ -24,11 +24,11 @@ namespace EMS
 
         protected void LinkButton3_Click(object sender, EventArgs e)
         {
-            Response.Redirect("TMapprovedreq.aspx");
+            Response.Redirect("TMapprovedleave.aspx");
         }
         protected void LinkButton4_Click(object sender, EventArgs e)
         {
-            Response.Redirect("TMrejectedreq.aspx");
+            Response.Redirect("TMrejectedleave.aspx");
         }
         protected void LinkButton5_Click(object sender, EventArgs e)
         {

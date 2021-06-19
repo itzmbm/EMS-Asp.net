@@ -11,47 +11,47 @@
                    <tr>
                        <td>
                        <asp:Label ID="Label1" runat="server" Text="Emp-ID"></asp:Label>:</td><td>
-                           <asp:TextBox ID="empid" runat="server" CssClass="tbox" placeholder="Enter employee ID"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate ="empid" ErrorMessage="Emp-ID required"></asp:RequiredFieldValidator></td>
+                           <asp:TextBox ID="empid" runat="server" CssClass="tbox" placeholder="Enter employee ID"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate ="empid" CssClass="val" ErrorMessage="Emp-ID required" Display="Dynamic"></asp:RequiredFieldValidator></td>
                    </tr>
                    <tr>
                        <td>
                        <asp:Label ID="Label2" runat="server" Text="Emp-Name"></asp:Label>:</td><td>
-                           <asp:TextBox ID="empname" runat="server" CssClass="tbox" placeholder="Enter employee name"></asp:TextBox></td>
+                           <asp:TextBox ID="empname" runat="server" CssClass="tbox" placeholder="Enter employee name"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate ="empname" CssClass="val" ErrorMessage="Emp-Name required" Display="Dynamic"></asp:RequiredFieldValidator></td>
                    </tr>
                    <tr>
                        <td>
                        <asp:Label ID="Label3" runat="server" Text="Basic-Salary"></asp:Label>:</td><td>
-                           <asp:TextBox ID="bsal" runat="server" CssClass="tbox" type="number" placeholder="Enter Basic Salary amount"></asp:TextBox></td>
+                           <asp:TextBox ID="bsal" runat="server" CssClass="tbox" type="number" placeholder="Enter Basic Salary amount"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate ="bsal" CssClass="val" ErrorMessage="Basic Salary required" Display="Dynamic"></asp:RequiredFieldValidator></td>
                    </tr>
                    <tr>
                        <td>
                        <asp:Label ID="Label4" runat="server" Text="Houserent-Allowance"></asp:Label>:</td>
                        <td>
-                           <asp:TextBox ID="hra" runat="server" CssClass="tbox" type="number" placeholder="Enter Houserent Allowance amount"></asp:TextBox></td>
+                           <asp:TextBox ID="hra" runat="server" CssClass="tbox" type="number" placeholder="Enter Houserent Allowance amount"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate ="hra" CssClass="val" ErrorMessage="HRA required" Display="Dynamic"></asp:RequiredFieldValidator></td>
                    </tr>
                    <tr>
                        <td>
                        <asp:Label ID="Label5" runat="server" Text="Medical-Allowance"></asp:Label>:</td><td>
-                           <asp:TextBox ID="ma" runat="server" CssClass="tbox" type="number" placeholder="Enter Medical Allowance amount"></asp:TextBox></td>
+                           <asp:TextBox ID="ma" runat="server" CssClass="tbox" type="number" placeholder="Enter Medical Allowance amount"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate ="ma" CssClass="val" ErrorMessage="Medical Allowance required" Display="Dynamic"></asp:RequiredFieldValidator></td>
                    </tr>
                    <tr>
                        <td>
                        <asp:Label ID="Label6" runat="server" Text="Fuel-Allowance"></asp:Label>:</td><td>
-                           <asp:TextBox ID="fa" runat="server" CssClass="tbox" type="number" placeholder="Enter Fuel Allowance amount"></asp:TextBox></td>
+                           <asp:TextBox ID="fa" runat="server" CssClass="tbox" type="number" placeholder="Enter Fuel Allowance amount"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate ="fa" CssClass="val" ErrorMessage="Fuel Allowance required" Display="Dynamic"></asp:RequiredFieldValidator></td>
                        <tr>
                        <td>
                        <asp:Label ID="Label7" runat="server" Text="Phone/Internet-Allowance"></asp:Label>:</td><td>
-                           <asp:TextBox ID="pia" runat="server" CssClass="tbox" type="number" placeholder="Enter Phone/Internet Allowance amount"></asp:TextBox></td>
+                           <asp:TextBox ID="pia" runat="server" CssClass="tbox" type="number" placeholder="Enter Phone/Internet Allowance amount"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate ="pia" CssClass="val" ErrorMessage="PIA required" Display="Dynamic"></asp:RequiredFieldValidator></td>
                    </tr>
                    <tr>
                        <td>
                        <asp:Label ID="Label8" runat="server" Text="Provident Fund"></asp:Label>:</td><td>
-                           <asp:TextBox ID="pf" runat="server" CssClass="tbox" type="number" placeholder="Enter Provident Fund amount"></asp:TextBox></td>
+                           <asp:TextBox ID="pf" runat="server" CssClass="tbox" type="number" placeholder="Enter Provident Fund amount"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate ="pf" CssClass="val" ErrorMessage="PF required" Display="Dynamic"></asp:RequiredFieldValidator></td>
                    </tr>
                    <tr>
                        <td>
                        <asp:Label ID="Label9" runat="server" Text="Tax Deduction"></asp:Label>:</td><td>
-                           <asp:TextBox ID="taxd" runat="server" CssClass="tbox" type="number" placeholder="Enter Tax deduction amount"></asp:TextBox></td>
+                           <asp:TextBox ID="taxd" runat="server" CssClass="tbox" type="number" placeholder="Enter Tax deduction amount"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate ="taxd" CssClass="val" ErrorMessage="Tax-Required required"></asp:RequiredFieldValidator></td>
                    </tr>
                     <tr>
                        <td>
@@ -87,7 +87,7 @@
         <div class="wrapper1 shadow-lg p-3 mb-5 bg-white rounded" >
               <h2>Search</h2>
                 <hr />
-                <asp:TextBox ID="search" runat="server" CssClass="tbox" placeholder="Enter employee ID">&nbsp;&nbsp;&nbsp;</asp:TextBox><asp:Button ID="Button4" runat="server" Text="Search"  CssClass="search btn btn-primary" />
+                <asp:TextBox ID="search" runat="server" CssClass="tbox" placeholder="Enter employee ID">&nbsp;&nbsp;&nbsp;</asp:TextBox><asp:Button ID="Button4" runat="server" Text="Search" CausesValidation="false" CssClass="search btn btn-primary" />
             </div>
              </div>
 </asp:Content>

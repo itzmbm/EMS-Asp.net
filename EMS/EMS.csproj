@@ -173,11 +173,14 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="tm.css" />
+    <Content Include="TMapprovedleave.aspx" />
     <Content Include="TMdash.aspx" />
+    <Content Include="TMleavereq.aspx" />
+    <Content Include="TMrejectedleave.aspx" />
+    <Content Include="TMviewemp.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
-    <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.Master.cs">
@@ -298,13 +301,6 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Site.Mobile.Master.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.designer.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-    </Compile>
     <Compile Include="TM.Master.cs">
       <DependentUpon>TM.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -312,12 +308,40 @@
     <Compile Include="TM.Master.designer.cs">
       <DependentUpon>TM.Master</DependentUpon>
     </Compile>
+    <Compile Include="TMapprovedleave.aspx.cs">
+      <DependentUpon>TMapprovedleave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TMapprovedleave.aspx.designer.cs">
+      <DependentUpon>TMapprovedleave.aspx</DependentUpon>
+    </Compile>
     <Compile Include="TMdash.aspx.cs">
       <DependentUpon>TMdash.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="TMdash.aspx.designer.cs">
       <DependentUpon>TMdash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TMleavereq.aspx.cs">
+      <DependentUpon>TMleavereq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TMleavereq.aspx.designer.cs">
+      <DependentUpon>TMleavereq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TMrejectedleave.aspx.cs">
+      <DependentUpon>TMrejectedleave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TMrejectedleave.aspx.designer.cs">
+      <DependentUpon>TMrejectedleave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TMviewemp.aspx.cs">
+      <DependentUpon>TMviewemp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TMviewemp.aspx.designer.cs">
+      <DependentUpon>TMviewemp.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

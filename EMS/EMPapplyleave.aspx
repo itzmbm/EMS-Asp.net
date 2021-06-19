@@ -60,10 +60,36 @@
                </table>
                  </div>
         <div class="wrapper1 shadow-lg p-3 mb-5 bg-white rounded">
-            <h2 >Leaves Applied</h2>
+            <h2 >Leaves Left</h2>
                  <hr />
-            <table>
-
-            </table>
+            <table class="stat">
+  <tr>
+    <th>Leave Type</th>
+    <th>Left</th>
+   
+  </tr>
+  <tr>
+    <td>Casual Leave</td>
+    <td>12</td>
+    
+  </tr>
+  <tr>
+    <td>Earned Leave</td>
+    <td>15</td>
+  </tr>
+  <tr>
+    <td>Sick Leave</td>
+    <td>12</td>
+  </tr>
+  <tr>
+   <td>Maternity Leave</td>
+    <td>135</td>
+  </tr>
+    <tr>
+   <td>Paternity Leave</td>
+    <td>15</td>
+  </tr>
+ 
+</table>
         </div>
 </asp:Content>

@@ -84,16 +84,19 @@ li {
 }
 
 .wrapper {
-    width: 500px;
+    min-width: 500px;
+    max-width:1000px;
     min-height: 300px;
-    max-height: 450px;
+    max-height: 1000px;
     position: relative;
     padding-top: 10px;
 }
 
 .wrapper1 {
-    width: 500px;
-    height: 200px;
+  min-width: 500px;
+    max-width:1000px;
+    min-height: 300px;
+    max-height: 1000px;
     position: relative;
     padding-top: 10px;
 }
@@ -105,3 +108,19 @@ h2 {
 .search {
     margin-left: 10px;
 }
+
+.stat {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.stat td, th {
+    border: 1px solid brown;
+    text-align: left;
+    padding: 8px;
+}
+
+    .stat tr:nth-child(even) {
+        background-color: #f37437;
+    }
