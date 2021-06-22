@@ -86,6 +86,12 @@ li {
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.dash {
+    display: flex;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 .wrapper {
     width: 600px;
     min-height:300px;
@@ -103,6 +109,12 @@ li {
     
   
 }
+.wrapper2 {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    padding-top: 10px;
+}
 h2{
     
     text-align:center;
@@ -112,4 +124,7 @@ h2{
 }
 .val{
     color:red;
+}
+h3{
+    color:white;
 }

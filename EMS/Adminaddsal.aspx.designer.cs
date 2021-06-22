@@ -330,31 +330,31 @@ namespace EMS
         protected global::System.Web.UI.WebControls.TextBox netsal;
 
         /// <summary>
-        /// Button1 control.
+        /// Add control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button Add;
 
         /// <summary>
-        /// Button2 control.
+        /// Update control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button Update;
 
         /// <summary>
-        /// Button3 control.
+        /// Delete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.WebControls.Button Delete;
 
         /// <summary>
         /// search control.
@@ -366,12 +366,12 @@ namespace EMS
         protected global::System.Web.UI.WebControls.TextBox search;
 
         /// <summary>
-        /// Button4 control.
+        /// searchbtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button4;
+        protected global::System.Web.UI.WebControls.Button searchbtn;
     }
 }

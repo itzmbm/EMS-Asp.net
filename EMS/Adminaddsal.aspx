@@ -75,8 +75,8 @@
                    </tr>
                
                    <tr> 
-                       <td><br /></td><td><br /><asp:Button ID="Button1" runat="server" Text="Add" class="btn btn-success" />&nbsp;<asp:Button ID="Button2" runat="server" Text="Update" class="btn btn-warning" />
-                           <asp:Button ID="Button3" runat="server" Text="Delete" class="btn btn-danger" />
+                       <td><br /></td><td><br /><asp:Button ID="Add" runat="server" Text="Add" class="btn btn-success" OnClick="Add_Click" />&nbsp;<asp:Button ID="Update" runat="server" Text="Update" class="btn btn-warning" OnClick="Update_Click"/>
+                           <asp:Button ID="Delete" runat="server" Text="Delete" class="btn btn-danger" OnClick="Delete_Click"/>
                           </td>
                    </tr>
                </table>
@@ -87,7 +87,7 @@
         <div class="wrapper1 shadow-lg p-3 mb-5 bg-white rounded" >
               <h2>Search</h2>
                 <hr />
-                <asp:TextBox ID="search" runat="server" CssClass="tbox" placeholder="Enter employee ID">&nbsp;&nbsp;&nbsp;</asp:TextBox><asp:Button ID="Button4" runat="server" Text="Search" CausesValidation="false" CssClass="search btn btn-primary" />
+                <asp:TextBox ID="search" runat="server" CssClass="tbox" placeholder="Enter employee ID">&nbsp;&nbsp;&nbsp;</asp:TextBox><asp:Button ID="searchbtn" runat="server" Text="Search" CausesValidation="false" CssClass="search btn btn-primary" OnClick="Searchbtn_Click" />
             </div>
              </div>
 </asp:Content>

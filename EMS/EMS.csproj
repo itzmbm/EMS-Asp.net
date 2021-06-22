@@ -139,6 +139,14 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Admin.Master" />
     <Content Include="EMP.Master" />
+    <Content Include="Employee.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Employee.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Employee.dbml.layout">
+      <DependentUpon>Employee.dbml</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="index.css" />
     <Content Include="index.html" />
@@ -275,6 +283,11 @@
     </Compile>
     <Compile Include="EMPleavestat.aspx.designer.cs">
       <DependentUpon>EMPleavestat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Employee.dbml</DependentUpon>
     </Compile>
     <Compile Include="EMPviewpro.aspx.cs">
       <DependentUpon>EMPviewpro.aspx</DependentUpon>

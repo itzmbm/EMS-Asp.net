@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="emp" Class="EmployeeDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=emp;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="empConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.empdetails" Member="empdetails">
+    <Type Name="empdetails">
+      <Column Name="empid" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="empname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="phoneno" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="hiredate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="mngid" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="deptid" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="jobid" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="gender" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="empdetails_empdetails" Member="empdetails1" ThisKey="empid" OtherKey="mngid" Type="empdetails" />
+      <Association Name="empdetails_empsalary" Member="empsalaries" ThisKey="empid" OtherKey="empid" Type="empsalary" />
+      <Association Name="empdetails_empdetails" Member="empdetail1" ThisKey="mngid" OtherKey="empid" Type="empdetails" IsForeignKey="true" />
+      <Association Name="deptdetails_empdetails" Member="deptdetails" ThisKey="deptid" OtherKey="deptid" Type="deptdetails" IsForeignKey="true" />
+      <Association Name="jobdetails_empdetails" Member="jobdetails" ThisKey="jobid" OtherKey="jobid" Type="jobdetails" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.deptdetails" Member="deptdetails">
+    <Type Name="deptdetails">
+      <Column Name="deptid" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="deptname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="mngid" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="location" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="deptdetails_empdetails" Member="empdetails" ThisKey="deptid" OtherKey="deptid" Type="empdetails" />
+    </Type>
+  </Table>
+  <Table Name="dbo.jobdetails" Member="jobdetails">
+    <Type Name="jobdetails">
+      <Column Name="jobid" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="jobtitle" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="minsal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="maxsal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="jobdetails_empdetails" Member="empdetails" ThisKey="jobid" OtherKey="jobid" Type="empdetails" />
+    </Type>
+  </Table>
+  <Table Name="dbo.empsalary" Member="empsalaries">
+    <Type Name="empsalary">
+      <Column Name="empid" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="empname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="bsalary" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="hra" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="pf" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tax" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="od" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gross" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="totalded" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="net" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="empdetails_empsalary" Member="empdetails" ThisKey="empid" OtherKey="empid" Type="empdetails" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

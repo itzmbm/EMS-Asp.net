@@ -51,13 +51,13 @@ namespace EMS
         protected global::System.Web.UI.WebControls.Label Label15;
 
         /// <summary>
-        /// jname control.
+        /// jtitle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox jname;
+        protected global::System.Web.UI.WebControls.TextBox jtitle;
 
         /// <summary>
         /// RequiredFieldValidator2 control.
@@ -123,48 +123,48 @@ namespace EMS
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
 
         /// <summary>
-        /// Button9 control.
+        /// Add control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button9;
+        protected global::System.Web.UI.WebControls.Button Add;
 
         /// <summary>
-        /// search2 control.
+        /// Update control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button search2;
+        protected global::System.Web.UI.WebControls.Button Update;
 
         /// <summary>
-        /// Button11 control.
+        /// Delete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button11;
+        protected global::System.Web.UI.WebControls.Button Delete;
 
         /// <summary>
-        /// TextBox5 control.
+        /// search control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox5;
+        protected global::System.Web.UI.WebControls.TextBox search;
 
         /// <summary>
-        /// search3 control.
+        /// searchbtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button search3;
+        protected global::System.Web.UI.WebControls.Button searchbtn;
     }
 }

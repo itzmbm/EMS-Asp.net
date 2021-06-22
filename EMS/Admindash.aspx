@@ -3,5 +3,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--dashboard-->
-    <h1>dashboard</h1>
+    <h2 style="text-align:center">Dashboard&nbsp;<i class="fas fa-analytics" style="color:black;"></i></h2>
+  
 </asp:Content>
