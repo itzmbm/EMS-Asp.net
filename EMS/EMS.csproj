@@ -113,6 +113,10 @@
     <Content Include="Adminaddsal.aspx" />
     <Content Include="Admindash.aspx" />
     <Content Include="adminpage.css" />
+    <Content Include="Adminviewdept.aspx" />
+    <Content Include="Adminviewemp.aspx" />
+    <Content Include="Adminviewjob.aspx" />
+    <Content Include="Adminviewtm.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -232,6 +236,34 @@
     </Compile>
     <Compile Include="Admindash.aspx.designer.cs">
       <DependentUpon>Admindash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adminviewdept.aspx.cs">
+      <DependentUpon>Adminviewdept.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adminviewdept.aspx.designer.cs">
+      <DependentUpon>Adminviewdept.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adminviewemp.aspx.cs">
+      <DependentUpon>Adminviewemp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adminviewemp.aspx.designer.cs">
+      <DependentUpon>Adminviewemp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adminviewjob.aspx.cs">
+      <DependentUpon>Adminviewjob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adminviewjob.aspx.designer.cs">
+      <DependentUpon>Adminviewjob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Adminviewtm.aspx.cs">
+      <DependentUpon>Adminviewtm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Adminviewtm.aspx.designer.cs">
+      <DependentUpon>Adminviewtm.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">

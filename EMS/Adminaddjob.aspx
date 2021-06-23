@@ -12,26 +12,28 @@
                    <tr>
                        <td>
                        <asp:Label ID="Label14" runat="server" Text="Job-ID"></asp:Label>:</td><td>
-                           <asp:TextBox ID="jid" runat="server" CssClass="tbox" placeholder="Enter Job ID"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="jid" cssClass="val" ErrorMessage="Job-ID required"></asp:RequiredFieldValidator></td>
+                           <asp:TextBox ID="jid" runat="server" CssClass="tbox" placeholder="Enter Job ID"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="jid" cssClass="val" Display="Dynamic" ErrorMessage="Job-ID required"></asp:RequiredFieldValidator></td>
                    </tr>
                    <tr>
                        
                        <td>
                        <asp:Label ID="Label15" runat="server" Text="Job-Title"></asp:Label>:</td><td>
-                           <asp:TextBox ID="jtitle" runat="server" CssClass="tbox" placeholder="Enter Job title"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="jtitle" CssClass="val" ErrorMessage="Job-Title required"></asp:RequiredFieldValidator></td>
+                           <asp:TextBox ID="jtitle" runat="server" CssClass="tbox" placeholder="Enter Job title"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="jtitle" CssClass="val" Display="Dynamic" ErrorMessage="Job-Title required"></asp:RequiredFieldValidator></td>
                    </tr>
                     <tr>
                        <td>
                        <asp:Label ID="Label16" runat="server" Text="Minimum-Salary"></asp:Label>:</td><td>
-                           <asp:TextBox ID="minsal" runat="server" CssClass="tbox" placeholder="Enter minimum salary" type="number"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="minsal" cssClass="val" ErrorMessage="Minimum salary required"></asp:RequiredFieldValidator></td>
+                           <asp:TextBox ID="minsal" runat="server" CssClass="tbox" placeholder="Enter minimum salary" type="number"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="minsal" cssClass="val" Display="Dynamic" ErrorMessage="Minimum salary required"></asp:RequiredFieldValidator></td>
                    </tr>
                    <tr>
                        <td>
                        <asp:Label ID="Label17" runat="server" Text="Maximum-Salary"></asp:Label>:</td><td>
-                           <asp:TextBox ID="maxsal" runat="server" CssClass="tbox" placeholder="Enter maximum salary" type="number"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="maxsal" cssClass="val" ErrorMessage="Maximum salary required"></asp:RequiredFieldValidator></td>
+                           <asp:TextBox ID="maxsal" runat="server" CssClass="tbox" placeholder="Enter maximum salary" type="number"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="maxsal" cssClass="val" Display="Dynamic" ErrorMessage="Maximum salary required"></asp:RequiredFieldValidator>
+                           <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="minsal"  ControlToValidate="maxsal" Display="Dynamic" ErrorMessage="maxsalary should be >= minsalary" ForeColor="Red"   Operator="GreaterThanEqual" Type="Integer"></asp:CompareValidator>
+                                                                                                      </td>
                    </tr>
                    
-              
+                   
                    <tr>
                         
                        <td><br /></td><td><br /><asp:Button ID="Add" runat="server" Text="Add" class="btn btn-success" OnClick="Add_Click"/>&nbsp;<asp:Button ID="Update" runat="server" Text="Update" class="btn btn-warning" OnClick="Update_Click" />

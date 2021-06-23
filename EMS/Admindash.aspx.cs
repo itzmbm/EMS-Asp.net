@@ -31,5 +31,25 @@ namespace EMS
             totaldept.Text = totdept.ToString();
             totaljob.Text = totjob.ToString();
             }
+
+        protected void Viewdept_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Adminviewdept.aspx");
+        }
+
+        protected void Viewjob_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Adminviewjob.aspx");
+        }
+
+        protected void Viewemp_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Adminviewemp.aspx");
+        }
+
+        protected void Viewtm_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Adminviewtm.aspx");
+        }
     }
 }

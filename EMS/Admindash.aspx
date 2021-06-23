@@ -18,7 +18,7 @@
       <h3>Total Employees</h3> <br />
                     <p>List of Employee details</p>
                     <p>Click below link</p><br />
-      <a href="" >View In Detail</a>
+      <asp:LinkButton ID="Viewemp" runat="server" OnClick="Viewemp_Click" causesvalidation="false" >View In Detail</asp:LinkButton>
     </div>
                 </div>
 </div>    
@@ -37,7 +37,7 @@
                     <h3>Total Managers</h3> <br />
                     <p>List of Managers details</p>
                     <p>Click below link</p><br />
-                    <a href=""  style="text-decoration:none;">View In Detail</a>
+                    <asp:LinkButton ID="LinkButton2" runat="server" OnClick="Viewtm_Click" causesvalidation="false" >View In Detail</asp:LinkButton>
                 </div>
                 </div>
         </div>
@@ -55,7 +55,7 @@
                    <h3>Total Departments</h3> <br />
                    <p>List of Department details</p>
                     <p>Click below link</p><br />
-                         <a href="" >View In Detail</a>
+                         <asp:LinkButton ID="LinkButton3" runat="server" OnClick="Viewdept_Click" causesvalidation="false" >View In Detail</asp:LinkButton>
                                  </div>
         </div>
             </div>
@@ -74,7 +74,7 @@
                      <h3>Total Jobs</h3> <br />
                      <p>List of Job details</p>
                     <p>Click below link</p><br />
-            <a href="" >View In Detail</a>
+            <asp:LinkButton ID="LinkButton4" runat="server" OnClick="Viewjob_Click" causesvalidation="false" >View In Detail</asp:LinkButton>
                      </div>
         </div>
     </div>

@@ -58,7 +58,12 @@ li {
     border: none;
     border-bottom: 2px solid grey;
 }
-
+.view {
+    display: flex;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 .addemp {
    display:flex;
     margin-top:40px;
@@ -91,6 +96,14 @@ li {
     margin-top: 50px;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+.viewwrap {
+    min-width:300px;
+    max-width:900px;
+    min-height: 300px;
+    max-height: 900px;
+    position: relative;
+    padding-top: 10px;
 }
 .wrapper {
     width: 600px;

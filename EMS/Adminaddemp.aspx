@@ -49,14 +49,16 @@
                     <td>
                         <asp:Label ID="Label6" runat="server" Text="Manager-ID"></asp:Label>:</td>
                     <td>
-                        <asp:TextBox ID="mid" runat="server" CssClass="tbox" placeholder="Enter manager ID"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="mid" CssClass="val" ErrorMessage="Manager-ID required"></asp:RequiredFieldValidator>
+                        <asp:TextBox ID="mid" runat="server" CssClass="tbox" placeholder="Enter manager ID"></asp:TextBox><%--<asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="mid" CssClass="val" ErrorMessage="Manager-ID required"></asp:RequiredFieldValidator>--%>
                     </td>
                 </tr>
                 <tr>
                     <td>
                         <asp:Label ID="Label7" runat="server" Text="Department-ID"></asp:Label>:</td>
                     <td>
-                        <asp:DropDownList ID="deptid" AppendDataBoundItems="true" DataTextField="deptname" DataValueField="deptid"  runat="server" CssClass="tbox" Width="180px"><asp:ListItem Value="">Select Department</asp:ListItem></asp:DropDownList><asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="deptid" CssClass="val" ErrorMessage="Department-ID required"></asp:RequiredFieldValidator>
+                        <asp:DropDownList ID="deptid" AppendDataBoundItems="true" DataTextField="deptname" DataValueField="deptid" runat="server" CssClass="tbox" Width="180px">
+                            <asp:ListItem Value="">Select Department</asp:ListItem>
+                        </asp:DropDownList><asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="deptid" CssClass="val" ErrorMessage="Department-ID required"></asp:RequiredFieldValidator>
                     </td>
 
                 </tr>
@@ -64,7 +66,9 @@
                     <td>
                         <asp:Label ID="Label8" runat="server" Text="Job-ID"></asp:Label>:</td>
                     <td>
-                        <asp:DropDownList ID="jid" runat="server" CssClass="tbox" AppendDataBoundItems="true" DataTextField="jobtitle" DataValueField="jobid" Width="180px"><asp:ListItem Value="">Select Job Title</asp:ListItem></asp:DropDownList></asp:DropDownList>
+                        <asp:DropDownList ID="jid" runat="server" CssClass="tbox" AppendDataBoundItems="true" DataTextField="jobtitle" DataValueField="jobid" Width="180px">
+                            <asp:ListItem Value="">Select Job Title</asp:ListItem>
+                        </asp:DropDownList></asp:DropDownList>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="jid" CssClass="val" ErrorMessage="Job-ID required"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
