@@ -2,7 +2,7 @@
     /* margin:0;
             padding: 0;*/
     /* background-image: url('/images/sam.jpg');*/
-    background: linear-gradient(to bottom, #757f9a, #d7dde8);
+    background: linear-gradient(to bottom, #F8F0C6, #d7dde8); /* #757f9a*/
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -111,9 +111,46 @@ li {
 }
 .wrapper2 {
     width: 300px;
-    height: 200px;
+    height: 250px;
     position: relative;
     padding-top: 10px;
+    background: linear-gradient(to right, #F46723,#f37437); /*#FF5301 #F46723 #f37437*/
+    perspective: 1000px;
+}
+
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.wrapper2:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #F0A581;
+    color: black;
+}
+
+.flip-card-back {
+    background-color: #F0A581;
+    color: white;
+    transform: rotateY(180deg);
+    color:black;
 }
 h2{
     
@@ -126,5 +163,21 @@ h2{
     color:red;
 }
 h3{
-    color:white;
+    color:black;
+    text-align:center;
+}
+.labl {
+    font-size: 44px;
+    color: black;
+    
+}
+.sec {
+    font-size:20px;
+    text-align: center;
+    margin-top:25px;
+
+}
+.icn{
+    width:100px;
+    height:100px;
 }

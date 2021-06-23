@@ -61,11 +61,30 @@ VALUES
             cmd.Parameters.AddWithValue("@jobid", jobid);
             cmd.Parameters.AddWithValue("@gender", gen);
             cmd.Parameters.AddWithValue("@password", pwd);
-
+            SqlCommand cmd1 = new SqlCommand(@"INSERT INTO [dbo].[empleavetype]
+([empid],[empname],[casual],[earned],[sick],[maternity],[paternity])
+VALUES
+(@empid,@empname,@casual,@earned,@sick,@maternity,@paternity)", cnn);
+            cmd1.Parameters.AddWithValue("@empid", eid);
+            cmd1.Parameters.AddWithValue("@empname", ename);
+            cmd1.Parameters.AddWithValue("@casual", 12);
+            cmd1.Parameters.AddWithValue("@earned", 15);
+            cmd1.Parameters.AddWithValue("@sick", 12);
+            if (gen == "male")
+            {
+                cmd1.Parameters.AddWithValue("@maternity", 0);
+                cmd1.Parameters.AddWithValue("@paternity", 15);
+            }
+            else
+            {
+                cmd1.Parameters.AddWithValue("@maternity", 135);
+                cmd1.Parameters.AddWithValue("@paternity", 0);
+            }
             try
             {
                 cnn.Open();
                 cmd.ExecuteNonQuery();
+                cmd1.ExecuteNonQuery();
                 Response.Write("<script>alert('Data inserted')</script>");
                 cnn.Close();
             }
@@ -146,9 +165,13 @@ VALUES
                 reader.Close();
                 SqlCommand cmd = new SqlCommand(@"DELETE FROM [dbo].[empdetails] WHERE [empid]=@empid", cnn);
                 cmd.Parameters.AddWithValue("@empid", eid);
+                SqlCommand cmd1 = new SqlCommand(@"DELETE FROM [dbo].[empleavetype] WHERE [empid]=@empid", cnn);
+                cmd1.Parameters.AddWithValue("@empid", eid);
                 cmd.ExecuteNonQuery();
+                cmd1.ExecuteNonQuery();
                 Response.Write("<script>alert('Data Deleted Successfully')</script>");
                 cmd.Dispose();
+                cmd1.Dispose();
             }
             else
             {
