@@ -3,66 +3,41 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="adddept" >
-               <div class="wrapper shadow-lg p-3 mb-5 bg-white rounded">
+               <div class="viewwrap shadow-lg p-3 mb-5 bg-white rounded">
                   
                 <h2>Salary Details</h2>
                  <hr />
                     <div style="text-align:center;">
-                       <button class="btn btn-primary">Print</button>
+                     
+                        <asp:Button ID="Prnt" runat="server" Text="Print Pay Slip" style="width:150px;" OnClick="Print" cssClass="btn btn-primary" />
+                      
+                        
                    </div>
-               <table class="stat">
-  
-  <tr>
-    <td>Emp-ID</td>
-    <td>e01</td>
-  </tr>
- <tr>
-    <td>Emp-Name</td>
-    <td>abc</td>
-  </tr>
-  <tr>
-    <td>Basic Salary</td>
-    <td>45000</td>
-  </tr>
-    <tr>
-    <td>HRA</td>
-    <td>10000</td>
-  </tr>
-                    <tr>
-    <td>Medical Allowance</td>
-    <td>5000</td>
-  </tr>
-                    <tr>
-    <td>Fuel Allowance</td>
-    <td>1000</td>
-  </tr>
-   <tr>
-    <td>Phone/Internet</td>
-    <td>1000</td>
-  </tr>
-    <tr>
-    <td>Tax Deduction</td>
-    <td>2250</td>
-  </tr>
- <tr>
-    <td>Other Deduction</td>
-    <td>1250</td>
-  </tr>
-   <tr>
-    <td>Gross Salary</td>
-    <td>62000</td>
-  </tr>
-   <tr>
-    <td>Total Deduction</td>
-    <td>3500</td>
-  </tr>
-    <tr>
-    <td>Net Salary</td>
-    <td>58500</td>
-  </tr>  
-                  
-</table>
-                 </div>
+                   <br />
+                   
+                   <div style="margin-left:60px;">
+                   <asp:GridView ID="GridView1" CssClass="Grid" DataSourceID="GridDataSource" HeaderStyle-CssClass="header"
+        runat="server" CellPadding="4" ForeColor="#333333" GridLines="None"> 
+                       <AlternatingRowStyle BackColor="White" />
+                       <EditRowStyle BackColor="#7C6F57" />
+                       <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
+<HeaderStyle CssClass="header" BackColor="#f37437" Font-Bold="True" ForeColor="White"></HeaderStyle>
+                       <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
+                       <RowStyle BackColor="#F5C9B4" />
+                       <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
+                       <SortedAscendingCellStyle BackColor="#F8FAFA" />
+                       <SortedAscendingHeaderStyle BackColor="#246B61" />
+                       <SortedDescendingCellStyle BackColor="#D4DFE1" />
+                       <SortedDescendingHeaderStyle BackColor="#15524A" />
+                   </asp:GridView>
+                   
+                   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:empConnectionString %>" SelectCommand="SELECT * FROM [empsalary] WHERE ([empid] = @empid)">
+                       <SelectParameters>
+                           <asp:SessionParameter Name="empid" SessionField="eid" Type="String" />
+                       </SelectParameters>
+                   </asp:SqlDataSource>
+                </div>
+                   </div>
 
         </div>
 </asp:Content>

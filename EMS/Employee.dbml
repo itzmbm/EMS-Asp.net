@@ -14,6 +14,8 @@
       <Column Name="password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="empdetails_empdetails" Member="empdetails1" ThisKey="empid" OtherKey="mngid" Type="empdetails" />
       <Association Name="empdetails_empsalary" Member="empsalaries" ThisKey="empid" OtherKey="empid" Type="empsalary" />
+      <Association Name="empdetails_empleave" Member="empleaves" ThisKey="empid" OtherKey="empid" Type="empleaves" />
+      <Association Name="empdetails_empleavetype" Member="empleavetypes" ThisKey="empid" OtherKey="empid" Type="empleavetype" />
       <Association Name="empdetails_empdetails" Member="empdetail1" ThisKey="mngid" OtherKey="empid" Type="empdetails" IsForeignKey="true" />
       <Association Name="deptdetails_empdetails" Member="deptdetails" ThisKey="deptid" OtherKey="deptid" Type="deptdetails" IsForeignKey="true" />
       <Association Name="jobdetails_empdetails" Member="jobdetails" ThisKey="jobid" OtherKey="jobid" Type="jobdetails" IsForeignKey="true" />
@@ -53,6 +55,31 @@
       <Column Name="totalded" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="net" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="empdetails_empsalary" Member="empdetails" ThisKey="empid" OtherKey="empid" Type="empdetails" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.empleaves" Member="empleaves">
+    <Type Name="empleaves">
+      <Column Name="empid" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="empname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="fromdate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="tilldate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="nod" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="leavetype" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="reason" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="empdetails_empleave" Member="empdetails" ThisKey="empid" OtherKey="empid" Type="empdetails" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.empleavetype" Member="empleavetypes">
+    <Type Name="empleavetype">
+      <Column Name="empid" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="empname" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="casual" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="earned" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sick" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="maternity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="paternity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="empdetails_empleavetype" Member="empdetails" ThisKey="empid" OtherKey="empid" Type="empdetails" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>

@@ -28,11 +28,15 @@ namespace EMS
                 if (ut.Equals("Admin")) 
                 {
                     con.Open();
-                    string qry = "select * from adminlog where username='" + uid + "' and password='" + pass + "'";
+                    string qry = "select * from adminlog where username=@uid and password=@pass";
+                    
                     SqlCommand cmd = new SqlCommand(qry, con);
+                    cmd.Parameters.AddWithValue("@uid", uid);
+                    cmd.Parameters.AddWithValue("@pass", pass);
                     SqlDataReader sdr = cmd.ExecuteReader();
                     if (sdr.Read())
                     {
+                        Session["admin"] = uid;
                         Response.Redirect("Admindash.aspx");
                     }
                     else
@@ -45,11 +49,15 @@ namespace EMS
                 else if (ut.Equals("TM"))
                 {
                     con.Open();
-                    string qry = "select * from emplog where userid='" + uid + "' and password='" + pass + "'";
+                    string qry = "select * from empdetails where jobid='J101' and empid=@uid and password=@pass";
+
                     SqlCommand cmd = new SqlCommand(qry, con);
+                    cmd.Parameters.AddWithValue("@uid", uid);
+                    cmd.Parameters.AddWithValue("@pass", pass);
                     SqlDataReader sdr = cmd.ExecuteReader();
                     if (sdr.Read())
                     {
+                        Session["tmid"] = uid;
                         Response.Redirect("TMdash.aspx");
                     }
                     else
@@ -62,11 +70,15 @@ namespace EMS
                 else if (ut.Equals("EMP"))
                 {
                     con.Open();
-                    string qry = "select * from emplog where userid='" + uid + "' and password='" + pass + "'";
+                    string qry = "select * from empdetails where  empid=@uid and password=@pass";
+
                     SqlCommand cmd = new SqlCommand(qry, con);
+                    cmd.Parameters.AddWithValue("@uid", uid);
+                    cmd.Parameters.AddWithValue("@pass", pass);
                     SqlDataReader sdr = cmd.ExecuteReader();
                     if (sdr.Read())
                     {
+                        Session["eid"] = uid;
                         Response.Redirect("EMPdash.aspx");
                     }
                     else

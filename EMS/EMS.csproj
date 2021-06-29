@@ -126,9 +126,12 @@
     <Content Include="Default.aspx" />
     <Content Include="emp.css" />
     <Content Include="EMPapplyleave.aspx" />
+    <Content Include="EMPchangepwd.aspx" />
     <Content Include="EMPdash.aspx" />
     <Content Include="EMPleavestat.aspx" />
+    <Content Include="EMPviewal.aspx" />
     <Content Include="EMPviewpro.aspx" />
+    <Content Include="EMPviewrl.aspx" />
     <Content Include="EMPviewsal.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -302,6 +305,13 @@
     <Compile Include="EMPapplyleave.aspx.designer.cs">
       <DependentUpon>EMPapplyleave.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EMPchangepwd.aspx.cs">
+      <DependentUpon>EMPchangepwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EMPchangepwd.aspx.designer.cs">
+      <DependentUpon>EMPchangepwd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EMPdash.aspx.cs">
       <DependentUpon>EMPdash.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -321,12 +331,26 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Employee.dbml</DependentUpon>
     </Compile>
+    <Compile Include="EMPviewal.aspx.cs">
+      <DependentUpon>EMPviewal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EMPviewal.aspx.designer.cs">
+      <DependentUpon>EMPviewal.aspx</DependentUpon>
+    </Compile>
     <Compile Include="EMPviewpro.aspx.cs">
       <DependentUpon>EMPviewpro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="EMPviewpro.aspx.designer.cs">
       <DependentUpon>EMPviewpro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EMPviewrl.aspx.cs">
+      <DependentUpon>EMPviewrl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EMPviewrl.aspx.designer.cs">
+      <DependentUpon>EMPviewrl.aspx</DependentUpon>
     </Compile>
     <Compile Include="EMPviewsal.aspx.cs">
       <DependentUpon>EMPviewsal.aspx</DependentUpon>

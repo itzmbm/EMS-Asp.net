@@ -11,7 +11,14 @@ namespace EMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["eid"] != null)
+            {
 
+            }
+            else
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
         protected void LinkButton1_Click(object sender, EventArgs e)
         {
@@ -28,15 +35,17 @@ namespace EMS
         }
         protected void LinkButton4_Click(object sender, EventArgs e)
         {
-            Response.Redirect("EMPviewsal.aspx");
+            
+            Response.Redirect("EMPchangepwd.aspx");
         }
         protected void LinkButton5_Click(object sender, EventArgs e)
         {
-            Response.Redirect("EMPviewpro.aspx");
+            Response.Redirect("EMPviewsal.aspx");
         }
 
         protected void LinkButton6_Click(object sender, EventArgs e)
         {
+            Session.Abandon();
             Response.Redirect("Login.aspx");
         }
 

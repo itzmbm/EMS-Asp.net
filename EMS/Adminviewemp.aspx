@@ -18,6 +18,7 @@
                            <asp:BoundField DataField="deptid" HeaderText="deptid" SortExpression="deptid" />
                            <asp:BoundField DataField="jobid" HeaderText="jobid" SortExpression="jobid" />
                            <asp:BoundField DataField="gender" HeaderText="gender" SortExpression="gender" />
+                           <asp:BoundField DataField="password" HeaderText="password" SortExpression="password" />
                        </Columns>
                        <EditRowStyle BackColor="#7C6F57" />
                        <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
@@ -30,7 +31,7 @@
                        <SortedDescendingCellStyle BackColor="#D4DFE1" />
                        <SortedDescendingHeaderStyle BackColor="#15524A" />
                    </asp:GridView>
-                   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:empConnectionString %>" SelectCommand="SELECT [empid], [empname], [email], [phoneno], [hiredate], [mngid], [deptid], [jobid], [gender] FROM [empdetails]"></asp:SqlDataSource>
+                   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:empConnectionString %>" SelectCommand="SELECT * FROM [empdetails]"></asp:SqlDataSource>
                  </div>
         </div>
 </asp:Content>

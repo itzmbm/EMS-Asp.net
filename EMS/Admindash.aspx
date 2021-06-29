@@ -11,7 +11,7 @@
             <h3>Total Employees</h3>
             <section  class="sec">
                 <img src="images/empicon.png" class="icn" style="width:130px;"/><br />
-            <asp:Label ID="totalemp" runat="server"  cssClass="labl" Text="2"></asp:Label><br />
+            <asp:Label ID="totalemp" runat="server"  cssClass="labl" Text="0"></asp:Label><br />
                 </section>
                      </div>
                 <div class="flip-card-back">
@@ -30,7 +30,7 @@
             <h3>Total Managers</h3>
             <section class="sec">
                 <img src="images/mngicon.png" class="icn" /><br />
-            <asp:Label ID="totaltm" runat="server" cssClass="labl" Text="2"></asp:Label><br />
+            <asp:Label ID="totaltm" runat="server" cssClass="labl" Text="0"></asp:Label><br />
                 </section>
                 </div>
                 <div class="flip-card-back">
@@ -48,7 +48,7 @@
             <h3>Total Departments</h3>
             <section  class="sec">
                 <img src="images/depticon.png" class="icn" /><br />
-            <asp:Label ID="totaldept" runat="server" cssClass="labl" Text="2"></asp:Label><br />
+            <asp:Label ID="totaldept" runat="server" cssClass="labl" Text="0"></asp:Label><br />
                 </section>
                  </div>
                <div class="flip-card-back">
@@ -67,7 +67,7 @@
             <section  class="sec">
                 <img src="images/jobicon.png" class="icn" /><br />
 
-            <asp:Label ID="totaljob" runat="server" cssClass="labl" Text="2"></asp:Label><br />
+            <asp:Label ID="totaljob" runat="server" cssClass="labl" Text="0"></asp:Label><br />
                 </section>
                      </div>
                  <div class="flip-card-back">

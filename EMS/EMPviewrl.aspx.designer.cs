@@ -11,7 +11,7 @@ namespace EMS
 {
 
 
-    public partial class EMPviewpro
+    public partial class EMPviewrl
     {
 
         /// <summary>

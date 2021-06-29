@@ -102,6 +102,22 @@ namespace EMS
 				return this.GetTable<empsalary>();
 			}
 		}
+		
+		public System.Data.Linq.Table<empleaves> empleaves
+		{
+			get
+			{
+				return this.GetTable<empleaves>();
+			}
+		}
+		
+		public System.Data.Linq.Table<empleavetype> empleavetypes
+		{
+			get
+			{
+				return this.GetTable<empleavetype>();
+			}
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.empdetails")]
@@ -1095,6 +1111,294 @@ namespace EMS
 				if ((this._net != value))
 				{
 					this._net = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.empleaves")]
+	public partial class empleaves
+	{
+		
+		private string _empid;
+		
+		private string _empname;
+		
+		private System.DateTime _fromdate;
+		
+		private System.DateTime _tilldate;
+		
+		private int _nod;
+		
+		private string _leavetype;
+		
+		private string _reason;
+		
+		private string _status;
+		
+		public empleaves()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_empid", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string empid
+		{
+			get
+			{
+				return this._empid;
+			}
+			set
+			{
+				if ((this._empid != value))
+				{
+					this._empid = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_empname", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string empname
+		{
+			get
+			{
+				return this._empname;
+			}
+			set
+			{
+				if ((this._empname != value))
+				{
+					this._empname = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fromdate", DbType="Date NOT NULL")]
+		public System.DateTime fromdate
+		{
+			get
+			{
+				return this._fromdate;
+			}
+			set
+			{
+				if ((this._fromdate != value))
+				{
+					this._fromdate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tilldate", DbType="Date NOT NULL")]
+		public System.DateTime tilldate
+		{
+			get
+			{
+				return this._tilldate;
+			}
+			set
+			{
+				if ((this._tilldate != value))
+				{
+					this._tilldate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nod", DbType="Int NOT NULL")]
+		public int nod
+		{
+			get
+			{
+				return this._nod;
+			}
+			set
+			{
+				if ((this._nod != value))
+				{
+					this._nod = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_leavetype", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string leavetype
+		{
+			get
+			{
+				return this._leavetype;
+			}
+			set
+			{
+				if ((this._leavetype != value))
+				{
+					this._leavetype = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_reason", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string reason
+		{
+			get
+			{
+				return this._reason;
+			}
+			set
+			{
+				if ((this._reason != value))
+				{
+					this._reason = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_status", DbType="VarChar(50)")]
+		public string status
+		{
+			get
+			{
+				return this._status;
+			}
+			set
+			{
+				if ((this._status != value))
+				{
+					this._status = value;
+				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.empleavetype")]
+	public partial class empleavetype
+	{
+		
+		private string _empid;
+		
+		private string _empname;
+		
+		private int _casual;
+		
+		private int _earned;
+		
+		private int _sick;
+		
+		private int _maternity;
+		
+		private int _paternity;
+		
+		public empleavetype()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_empid", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string empid
+		{
+			get
+			{
+				return this._empid;
+			}
+			set
+			{
+				if ((this._empid != value))
+				{
+					this._empid = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_empname", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string empname
+		{
+			get
+			{
+				return this._empname;
+			}
+			set
+			{
+				if ((this._empname != value))
+				{
+					this._empname = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_casual", DbType="Int NOT NULL")]
+		public int casual
+		{
+			get
+			{
+				return this._casual;
+			}
+			set
+			{
+				if ((this._casual != value))
+				{
+					this._casual = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_earned", DbType="Int NOT NULL")]
+		public int earned
+		{
+			get
+			{
+				return this._earned;
+			}
+			set
+			{
+				if ((this._earned != value))
+				{
+					this._earned = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sick", DbType="Int NOT NULL")]
+		public int sick
+		{
+			get
+			{
+				return this._sick;
+			}
+			set
+			{
+				if ((this._sick != value))
+				{
+					this._sick = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_maternity", DbType="Int NOT NULL")]
+		public int maternity
+		{
+			get
+			{
+				return this._maternity;
+			}
+			set
+			{
+				if ((this._maternity != value))
+				{
+					this._maternity = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_paternity", DbType="Int NOT NULL")]
+		public int paternity
+		{
+			get
+			{
+				return this._paternity;
+			}
+			set
+			{
+				if ((this._paternity != value))
+				{
+					this._paternity = value;
 				}
 			}
 		}

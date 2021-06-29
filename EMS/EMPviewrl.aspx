@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/EMP.Master" AutoEventWireup="true" CodeBehind="EMPleavestat.aspx.cs" Inherits="EMS.EMPleavestat" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/EMP.Master" AutoEventWireup="true" CodeBehind="EMPviewrl.aspx.cs" Inherits="EMS.EMPviewrl" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -6,7 +6,7 @@
                <div class="wrapper shadow-lg p-3 mb-5 bg-white rounded">
                 <h2>Leave Status</h2>
                  <hr />
-                   <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None">
+                   <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
                        <AlternatingRowStyle BackColor="White" />
                        <Columns>
                            <asp:BoundField DataField="empid" HeaderText="empid" SortExpression="empid" />
@@ -19,8 +19,7 @@
                            <asp:BoundField DataField="reason" HeaderText="reason" SortExpression="reason" />
                            <asp:BoundField DataField="status" HeaderText="status" SortExpression="status" />
                        </Columns>
-                        
-                      <EditRowStyle BackColor="#7C6F57" />
+                 <EditRowStyle BackColor="#7C6F57" />
                        <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
                        <HeaderStyle BackColor="#f37437" Font-Bold="True" ForeColor="White" />
                        <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
@@ -30,12 +29,11 @@
                        <SortedAscendingHeaderStyle BackColor="#246B61" />
                        <SortedDescendingCellStyle BackColor="#D4DFE1" />
                        <SortedDescendingHeaderStyle BackColor="#15524A" />
-                        
                    </asp:GridView>
                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:empConnectionString %>" SelectCommand="SELECT * FROM [empleaves] WHERE (([empid] = @empid) AND ([status] = @status))">
                        <SelectParameters>
                            <asp:SessionParameter Name="empid" SessionField="eid" Type="String" />
-                           <asp:Parameter DefaultValue="Pending" Name="status" Type="String" />
+                           <asp:Parameter DefaultValue="Rejected" Name="status" Type="String" />
                        </SelectParameters>
                    </asp:SqlDataSource>
                  </div>

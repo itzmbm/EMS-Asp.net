@@ -13,5 +13,25 @@ namespace EMS
         {
 
         }
+
+        protected void ViewAL_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("EMPviewal.aspx");
+        }
+
+        protected void ViewRL_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("EMPviewrl.aspx");
+        }
+
+        protected void Viewsal_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("EMPviewsal.aspx");
+        }
+
+        protected void Viewpro_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("EMPviewpro.aspx");
+        }
     }
 }

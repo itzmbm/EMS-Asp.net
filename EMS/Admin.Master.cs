@@ -11,7 +11,14 @@ namespace EMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["admin"] != null)
+            {
+                
+            }
+            else
+            {
+                Response.Redirect("Login.aspx");
+            }
         }
      
 
@@ -41,6 +48,7 @@ namespace EMS
         }
         protected void LinkButton6_Click(object sender, EventArgs e)
         {
+            Session.Abandon();
             Response.Redirect("Login.aspx");
         }
     }
