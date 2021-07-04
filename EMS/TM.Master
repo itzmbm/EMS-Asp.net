@@ -33,9 +33,8 @@
             <span class="">
                 <li><asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" causesvalidation="false" >Dashboard</asp:LinkButton></li>
                 <li ><asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" causesvalidation="false" >Leaves Request</asp:LinkButton></li>
-                 <li ><asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click" causesvalidation="false" >Approved Leaves</asp:LinkButton></li>
-               <li ><asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton4_Click" causesvalidation="false" >Rejected Leaves</asp:LinkButton></li>
-                <li ><asp:LinkButton ID="LinkButton5" runat="server" OnClick="LinkButton5_Click" causesvalidation="false" >View Employees</asp:LinkButton></li>
+                  <li ><asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click" causesvalidation="false" >Change Password</asp:LinkButton></li>
+      
                 <li style="float:right;"><asp:LinkButton ID="LinkButton6" runat="server" OnClick="LinkButton6_Click" causesvalidation="false" >Log Out</asp:LinkButton></li>
             </span>
         </ul>

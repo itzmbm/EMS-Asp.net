@@ -4,11 +4,12 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="adddept" >
                <div class="wrapper shadow-lg p-3 mb-5 bg-white rounded">
-                <h2>Leave Status</h2>
+                <h2>Approved Leaves List</h2>
                  <hr />
-                   <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
+                   <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" DataKeyNames="leaveid">
                        <AlternatingRowStyle BackColor="White" />
                        <Columns>
+                           <asp:BoundField DataField="leaveid" HeaderText="leaveid" SortExpression="leaveid" InsertVisible="False" ReadOnly="True" />
                            <asp:BoundField DataField="empid" HeaderText="empid" SortExpression="empid" />
                            <asp:BoundField DataField="empname" HeaderText="empname" SortExpression="empname" />
                            <asp:BoundField DataField="mngid" HeaderText="mngid" SortExpression="mngid" />

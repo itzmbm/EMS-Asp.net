@@ -36,7 +36,7 @@ namespace EMS
                 empname.Text = employee.empname;
                 mngid.Text = employee.mngid;
             }
-            if (!IsPostBack)
+                if (!IsPostBack)
             {
                 DataTable dt = (SqlDataSource1.Select(DataSourceSelectArguments.Empty) as DataView).ToTable();
                 BindGrid(dt, true);

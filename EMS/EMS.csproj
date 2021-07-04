@@ -189,6 +189,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="tm.css" />
     <Content Include="TMapprovedleave.aspx" />
+    <Content Include="TMchangepwd.aspx" />
     <Content Include="TMdash.aspx" />
     <Content Include="TMleavereq.aspx" />
     <Content Include="TMrejectedleave.aspx" />
@@ -383,6 +384,13 @@
     </Compile>
     <Compile Include="TMapprovedleave.aspx.designer.cs">
       <DependentUpon>TMapprovedleave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TMchangepwd.aspx.cs">
+      <DependentUpon>TMchangepwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TMchangepwd.aspx.designer.cs">
+      <DependentUpon>TMchangepwd.aspx</DependentUpon>
     </Compile>
     <Compile Include="TMdash.aspx.cs">
       <DependentUpon>TMdash.aspx</DependentUpon>

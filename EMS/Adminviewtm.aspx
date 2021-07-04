@@ -6,7 +6,7 @@
                <div class="viewwrap shadow-lg p-3 mb-5 bg-white rounded">
                 <h2>Team Managers Details</h2>
                  <hr />
-                   <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="empid" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None">
+                   <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="empid" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" AllowPaging="True" AllowSorting="True">
                        <AlternatingRowStyle BackColor="White" />
                        <Columns>
                            <asp:BoundField DataField="empid" HeaderText="empid" ReadOnly="True" SortExpression="empid" />
@@ -32,7 +32,7 @@
                    </asp:GridView>
                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:empConnectionString %>" SelectCommand="SELECT [empid], [empname], [email], [phoneno], [hiredate], [mngid], [deptid], [jobid], [gender] FROM [empdetails] WHERE ([jobid] = @jobid)">
                        <SelectParameters>
-                           <asp:Parameter DefaultValue="J101" Name="jobid" Type="String" />
+                           <asp:Parameter DefaultValue="J102" Name="jobid" Type="String" />
                        </SelectParameters>
                    </asp:SqlDataSource>
                    </div>

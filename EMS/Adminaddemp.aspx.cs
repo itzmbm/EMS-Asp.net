@@ -38,7 +38,7 @@ namespace EMS
             string eid = empid.Text;
             string ename = empname.Text;
             string mail = email.Text;
-            int phoneno = int.Parse(phone.Text);
+            string phoneno =phone.Text;
             DateTime hired = Convert.ToDateTime(hiredate.Text);
             string mngid = mid.Text;
             string dptid = deptid.Text;
@@ -70,7 +70,7 @@ VALUES
             cmd1.Parameters.AddWithValue("@casual", 12);
             cmd1.Parameters.AddWithValue("@earned", 15);
             cmd1.Parameters.AddWithValue("@sick", 12);
-            if (gen == "male")
+            if (gen == "Male")
             {
                 cmd1.Parameters.AddWithValue("@maternity", 0);
                 cmd1.Parameters.AddWithValue("@paternity", 15);
@@ -103,7 +103,7 @@ VALUES
             string eid = empid.Text;
             string ename = empname.Text;
             string mail = email.Text;
-            int phoneno = int.Parse(phone.Text);
+            string phoneno = phone.Text;
             DateTime hired = Convert.ToDateTime(hiredate.Text);
             string mngid = mid.Text;
             string dptid = deptid.Text;

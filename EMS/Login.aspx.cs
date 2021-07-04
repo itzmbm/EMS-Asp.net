@@ -49,7 +49,7 @@ namespace EMS
                 else if (ut.Equals("TM"))
                 {
                     con.Open();
-                    string qry = "select * from empdetails where jobid='J101' and empid=@uid and password=@pass";
+                    string qry = "select * from empdetails where jobid='J102' and empid=@uid and password=@pass";
 
                     SqlCommand cmd = new SqlCommand(qry, con);
                     cmd.Parameters.AddWithValue("@uid", uid);

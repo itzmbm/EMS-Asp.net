@@ -31,16 +31,9 @@ namespace EMS
 
         protected void LinkButton3_Click(object sender, EventArgs e)
         {
-            Response.Redirect("TMapprovedleave.aspx");
+            Response.Redirect("TMchangepwd.aspx");
         }
-        protected void LinkButton4_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("TMrejectedleave.aspx");
-        }
-        protected void LinkButton5_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("TMviewemp.aspx");
-        }
+  
 
         protected void LinkButton6_Click(object sender, EventArgs e)
         {

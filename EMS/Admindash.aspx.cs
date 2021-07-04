@@ -19,7 +19,7 @@ namespace EMS
             SqlConnection cnn = new SqlConnection(ConnectionString);
             cnn.Open();
             SqlCommand emp = new SqlCommand("SELECT COUNT(*) FROM [empdetails] ", cnn);
-            SqlCommand mng = new SqlCommand("SELECT COUNT(*) FROM [empdetails] WHERE ([jobid] = 'J101')", cnn);
+            SqlCommand mng = new SqlCommand("SELECT COUNT(*) FROM [empdetails] WHERE ([jobid] = 'J102')", cnn);
             SqlCommand dept = new SqlCommand("SELECT COUNT(*) FROM [deptdetails] ", cnn);
             SqlCommand job = new SqlCommand("SELECT COUNT(*) FROM [jobdetails] ", cnn);
             int totemp = (int)emp.ExecuteScalar();

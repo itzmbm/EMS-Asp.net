@@ -15,13 +15,13 @@ namespace EMS
     {
 
         /// <summary>
-        /// AL control.
+        /// totalAL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label AL;
+        protected global::System.Web.UI.WebControls.Label totalAL;
 
         /// <summary>
         /// ViewAL control.
@@ -33,13 +33,13 @@ namespace EMS
         protected global::System.Web.UI.WebControls.LinkButton ViewAL;
 
         /// <summary>
-        /// RL control.
+        /// totalRL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label RL;
+        protected global::System.Web.UI.WebControls.Label totalRL;
 
         /// <summary>
         /// LinkButton2 control.

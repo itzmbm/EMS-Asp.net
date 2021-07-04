@@ -39,6 +39,9 @@ namespace EMS
     partial void Insertjobdetails(jobdetails instance);
     partial void Updatejobdetails(jobdetails instance);
     partial void Deletejobdetails(jobdetails instance);
+    partial void Insertempleave(empleave instance);
+    partial void Updateempleave(empleave instance);
+    partial void Deleteempleave(empleave instance);
     #endregion
 		
 		public EmployeeDataContext() : 
@@ -103,19 +106,19 @@ namespace EMS
 			}
 		}
 		
-		public System.Data.Linq.Table<empleaves> empleaves
-		{
-			get
-			{
-				return this.GetTable<empleaves>();
-			}
-		}
-		
 		public System.Data.Linq.Table<empleavetype> empleavetypes
 		{
 			get
 			{
 				return this.GetTable<empleavetype>();
+			}
+		}
+		
+		public System.Data.Linq.Table<empleave> empleaves
+		{
+			get
+			{
+				return this.GetTable<empleave>();
 			}
 		}
 	}
@@ -132,7 +135,7 @@ namespace EMS
 		
 		private string _email;
 		
-		private int _phoneno;
+		private string _phoneno;
 		
 		private System.DateTime _hiredate;
 		
@@ -147,6 +150,8 @@ namespace EMS
 		private string _password;
 		
 		private EntitySet<empdetails> _empdetails1;
+		
+		private EntitySet<empleave> _empleaves;
 		
 		private EntityRef<empdetails> _empdetail1;
 		
@@ -164,7 +169,7 @@ namespace EMS
     partial void OnempnameChanged();
     partial void OnemailChanging(string value);
     partial void OnemailChanged();
-    partial void OnphonenoChanging(int value);
+    partial void OnphonenoChanging(string value);
     partial void OnphonenoChanged();
     partial void OnhiredateChanging(System.DateTime value);
     partial void OnhiredateChanged();
@@ -183,6 +188,7 @@ namespace EMS
 		public empdetails()
 		{
 			this._empdetails1 = new EntitySet<empdetails>(new Action<empdetails>(this.attach_empdetails1), new Action<empdetails>(this.detach_empdetails1));
+			this._empleaves = new EntitySet<empleave>(new Action<empleave>(this.attach_empleaves), new Action<empleave>(this.detach_empleaves));
 			this._empdetail1 = default(EntityRef<empdetails>);
 			this._deptdetails = default(EntityRef<deptdetails>);
 			this._jobdetails = default(EntityRef<jobdetails>);
@@ -249,8 +255,8 @@ namespace EMS
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phoneno", DbType="Int NOT NULL")]
-		public int phoneno
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phoneno", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string phoneno
 		{
 			get
 			{
@@ -414,6 +420,19 @@ namespace EMS
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="empdetails_empleave", Storage="_empleaves", ThisKey="empid", OtherKey="empid")]
+		public EntitySet<empleave> empleaves
+		{
+			get
+			{
+				return this._empleaves;
+			}
+			set
+			{
+				this._empleaves.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="empdetails_empdetails", Storage="_empdetail1", ThisKey="mngid", OtherKey="empid", IsForeignKey=true)]
 		public empdetails empdetail1
 		{
@@ -546,6 +565,18 @@ namespace EMS
 		{
 			this.SendPropertyChanging();
 			entity.empdetail1 = null;
+		}
+		
+		private void attach_empleaves(empleave entity)
+		{
+			this.SendPropertyChanging();
+			entity.empdetails = this;
+		}
+		
+		private void detach_empleaves(empleave entity)
+		{
+			this.SendPropertyChanging();
+			entity.empdetails = null;
 		}
 	}
 	
@@ -1116,159 +1147,6 @@ namespace EMS
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.empleaves")]
-	public partial class empleaves
-	{
-		
-		private string _empid;
-		
-		private string _empname;
-		
-		private System.DateTime _fromdate;
-		
-		private System.DateTime _tilldate;
-		
-		private int _nod;
-		
-		private string _leavetype;
-		
-		private string _reason;
-		
-		private string _status;
-		
-		public empleaves()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_empid", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string empid
-		{
-			get
-			{
-				return this._empid;
-			}
-			set
-			{
-				if ((this._empid != value))
-				{
-					this._empid = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_empname", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string empname
-		{
-			get
-			{
-				return this._empname;
-			}
-			set
-			{
-				if ((this._empname != value))
-				{
-					this._empname = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fromdate", DbType="Date NOT NULL")]
-		public System.DateTime fromdate
-		{
-			get
-			{
-				return this._fromdate;
-			}
-			set
-			{
-				if ((this._fromdate != value))
-				{
-					this._fromdate = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tilldate", DbType="Date NOT NULL")]
-		public System.DateTime tilldate
-		{
-			get
-			{
-				return this._tilldate;
-			}
-			set
-			{
-				if ((this._tilldate != value))
-				{
-					this._tilldate = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nod", DbType="Int NOT NULL")]
-		public int nod
-		{
-			get
-			{
-				return this._nod;
-			}
-			set
-			{
-				if ((this._nod != value))
-				{
-					this._nod = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_leavetype", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string leavetype
-		{
-			get
-			{
-				return this._leavetype;
-			}
-			set
-			{
-				if ((this._leavetype != value))
-				{
-					this._leavetype = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_reason", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string reason
-		{
-			get
-			{
-				return this._reason;
-			}
-			set
-			{
-				if ((this._reason != value))
-				{
-					this._reason = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_status", DbType="VarChar(50)")]
-		public string status
-		{
-			get
-			{
-				return this._status;
-			}
-			set
-			{
-				if ((this._status != value))
-				{
-					this._status = value;
-				}
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.empleavetype")]
 	public partial class empleavetype
 	{
@@ -1400,6 +1278,325 @@ namespace EMS
 				{
 					this._paternity = value;
 				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.empleaves")]
+	public partial class empleave : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _leaveid;
+		
+		private string _empid;
+		
+		private string _empname;
+		
+		private string _mngid;
+		
+		private System.DateTime _fromdate;
+		
+		private System.DateTime _tilldate;
+		
+		private int _nod;
+		
+		private string _leavetype;
+		
+		private string _reason;
+		
+		private string _status;
+		
+		private EntityRef<empdetails> _empdetails;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnleaveidChanging(int value);
+    partial void OnleaveidChanged();
+    partial void OnempidChanging(string value);
+    partial void OnempidChanged();
+    partial void OnempnameChanging(string value);
+    partial void OnempnameChanged();
+    partial void OnmngidChanging(string value);
+    partial void OnmngidChanged();
+    partial void OnfromdateChanging(System.DateTime value);
+    partial void OnfromdateChanged();
+    partial void OntilldateChanging(System.DateTime value);
+    partial void OntilldateChanged();
+    partial void OnnodChanging(int value);
+    partial void OnnodChanged();
+    partial void OnleavetypeChanging(string value);
+    partial void OnleavetypeChanged();
+    partial void OnreasonChanging(string value);
+    partial void OnreasonChanged();
+    partial void OnstatusChanging(string value);
+    partial void OnstatusChanged();
+    #endregion
+		
+		public empleave()
+		{
+			this._empdetails = default(EntityRef<empdetails>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_leaveid", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int leaveid
+		{
+			get
+			{
+				return this._leaveid;
+			}
+			set
+			{
+				if ((this._leaveid != value))
+				{
+					this.OnleaveidChanging(value);
+					this.SendPropertyChanging();
+					this._leaveid = value;
+					this.SendPropertyChanged("leaveid");
+					this.OnleaveidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_empid", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string empid
+		{
+			get
+			{
+				return this._empid;
+			}
+			set
+			{
+				if ((this._empid != value))
+				{
+					if (this._empdetails.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnempidChanging(value);
+					this.SendPropertyChanging();
+					this._empid = value;
+					this.SendPropertyChanged("empid");
+					this.OnempidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_empname", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string empname
+		{
+			get
+			{
+				return this._empname;
+			}
+			set
+			{
+				if ((this._empname != value))
+				{
+					this.OnempnameChanging(value);
+					this.SendPropertyChanging();
+					this._empname = value;
+					this.SendPropertyChanged("empname");
+					this.OnempnameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mngid", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string mngid
+		{
+			get
+			{
+				return this._mngid;
+			}
+			set
+			{
+				if ((this._mngid != value))
+				{
+					this.OnmngidChanging(value);
+					this.SendPropertyChanging();
+					this._mngid = value;
+					this.SendPropertyChanged("mngid");
+					this.OnmngidChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fromdate", DbType="Date NOT NULL")]
+		public System.DateTime fromdate
+		{
+			get
+			{
+				return this._fromdate;
+			}
+			set
+			{
+				if ((this._fromdate != value))
+				{
+					this.OnfromdateChanging(value);
+					this.SendPropertyChanging();
+					this._fromdate = value;
+					this.SendPropertyChanged("fromdate");
+					this.OnfromdateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tilldate", DbType="Date NOT NULL")]
+		public System.DateTime tilldate
+		{
+			get
+			{
+				return this._tilldate;
+			}
+			set
+			{
+				if ((this._tilldate != value))
+				{
+					this.OntilldateChanging(value);
+					this.SendPropertyChanging();
+					this._tilldate = value;
+					this.SendPropertyChanged("tilldate");
+					this.OntilldateChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nod", DbType="Int NOT NULL")]
+		public int nod
+		{
+			get
+			{
+				return this._nod;
+			}
+			set
+			{
+				if ((this._nod != value))
+				{
+					this.OnnodChanging(value);
+					this.SendPropertyChanging();
+					this._nod = value;
+					this.SendPropertyChanged("nod");
+					this.OnnodChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_leavetype", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string leavetype
+		{
+			get
+			{
+				return this._leavetype;
+			}
+			set
+			{
+				if ((this._leavetype != value))
+				{
+					this.OnleavetypeChanging(value);
+					this.SendPropertyChanging();
+					this._leavetype = value;
+					this.SendPropertyChanged("leavetype");
+					this.OnleavetypeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_reason", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string reason
+		{
+			get
+			{
+				return this._reason;
+			}
+			set
+			{
+				if ((this._reason != value))
+				{
+					this.OnreasonChanging(value);
+					this.SendPropertyChanging();
+					this._reason = value;
+					this.SendPropertyChanged("reason");
+					this.OnreasonChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_status", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string status
+		{
+			get
+			{
+				return this._status;
+			}
+			set
+			{
+				if ((this._status != value))
+				{
+					this.OnstatusChanging(value);
+					this.SendPropertyChanging();
+					this._status = value;
+					this.SendPropertyChanged("status");
+					this.OnstatusChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="empdetails_empleave", Storage="_empdetails", ThisKey="empid", OtherKey="empid", IsForeignKey=true)]
+		public empdetails empdetails
+		{
+			get
+			{
+				return this._empdetails.Entity;
+			}
+			set
+			{
+				empdetails previousValue = this._empdetails.Entity;
+				if (((previousValue != value) 
+							|| (this._empdetails.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._empdetails.Entity = null;
+						previousValue.empleaves.Remove(this);
+					}
+					this._empdetails.Entity = value;
+					if ((value != null))
+					{
+						value.empleaves.Add(this);
+						this._empid = value.empid;
+					}
+					else
+					{
+						this._empid = default(string);
+					}
+					this.SendPropertyChanged("empdetails");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}

@@ -11,7 +11,7 @@
             <h3>Approved Leaves</h3>
             <section  class="sec">
                 <img src="images/approved.png" class="icn" /><br />
-            <asp:Label ID="AL" runat="server"  cssClass="labl" Text=""></asp:Label><br />
+            <asp:Label ID="totalAL" runat="server"  cssClass="labl" Text=""></asp:Label><br />
                 </section>
                      </div>
                 <div class="flip-card-back">
@@ -30,7 +30,7 @@
             <h3>Rejected Leaves</h3>
             <section class="sec">
                 <img src="images/rejected.png" class="icn" /><br />
-            <asp:Label ID="RL" runat="server" cssClass="labl" Text=""></asp:Label><br />
+            <asp:Label ID="totalRL" runat="server" cssClass="labl" Text=""></asp:Label><br />
                 </section>
                 </div>
                 <div class="flip-card-back">
