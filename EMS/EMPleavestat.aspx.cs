@@ -10,6 +10,7 @@ namespace EMS
 {
     public partial class EMPleavestat : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -37,30 +38,92 @@ namespace EMS
                     
                 }
             }
-           
+            Response.Write("<script>alert('Leave Cancelled')</script>");
             SqlDataSource1.DataBind();
             GridView1.DataSource = SqlDataSource1;
             GridView1.DataBind();
         }
         private void deleterow(string leaveid,string empid,string ltype,int nodays)
         {
-
+            int cleave=0;
+            int eleave=0;
+            int sleave=0;
+            int mleave=0;
+            int pleave=0;
             string ConnectionString = @"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = emp; Integrated Security = True";
             SqlConnection cnn = new SqlConnection(ConnectionString);
             cnn.Open();
             SqlCommand cmd = new SqlCommand(@"DELETE FROM[dbo].[empleaves] WHERE[leaveid] = @leaveid", cnn);
             cmd.Parameters.AddWithValue("@leaveid", leaveid);
+            EmployeeDataContext emp = new EmployeeDataContext();
+            empleavetype el = (from s in emp.empleavetypes where s.empid.ToString() == empid select s).FirstOrDefault();
+            if (el == null)
+            {
 
-            SqlCommand cmd1 = new SqlCommand(@"Update [dbo].[empleaves]
-            SET [nod] = @nod WHERE [empid] = @empid and [leavetype]=@leavetype", cnn);
-            cmd1.Parameters.AddWithValue("@empid", empid);
-            cmd1.Parameters.AddWithValue("@nod", nodays);
-            cmd1.Parameters.AddWithValue("@leavetype", ltype);
-            cmd1.ExecuteNonQuery();
-            cmd1.Dispose();
+            }
+            else
+            {
+                cleave = el.casual;
+                eleave = el.earned;
+                 sleave = el.sick;
+                mleave = el.maternity;
+                pleave = el.paternity;
+            }
+                if (ltype == "Casual")
+                {
+                     cleave += nodays;
+                    SqlCommand cmd1 = new SqlCommand(@"Update [dbo].[empleavetype]
+            SET [casual] = @casual WHERE [empid] = @empid", cnn);
+                    cmd1.Parameters.AddWithValue("@empid", empid);
+                    cmd1.Parameters.AddWithValue("@casual", cleave);
+                    cmd1.ExecuteNonQuery();
+                    cmd1.Dispose();
+                }
+                if (ltype == "Earned")
+                {
+                    SqlCommand cmd1 = new SqlCommand(@"Update [dbo].[empleavetype]
+            SET [earned] = @earned WHERE [empid] = @empid", cnn);
+                    eleave += nodays;
+                    cmd1.Parameters.AddWithValue("@empid", empid);
+                    cmd1.Parameters.AddWithValue("@earned", eleave);
+                    cmd1.ExecuteNonQuery();
+                    cmd1.Dispose();
+                }
+            if (ltype == "Sick")
+            {
+                SqlCommand cmd1 = new SqlCommand(@"Update [dbo].[empleavetype]
+            SET [sick] = @sick WHERE [empid] = @empid", cnn);
+                sleave += nodays;
+                cmd1.Parameters.AddWithValue("@empid", empid);
+                cmd1.Parameters.AddWithValue("@sick", sleave);
+                cmd1.ExecuteNonQuery();
+                cmd1.Dispose();
+
+            }
+            if (ltype == "Maternity")
+            {
+                SqlCommand cmd1 = new SqlCommand(@"Update [dbo].[empleavetype]
+            SET [maternity] = @maternity WHERE [empid] = @empid", cnn);
+                mleave += nodays;
+                cmd1.Parameters.AddWithValue("@empid", empid);
+                cmd1.Parameters.AddWithValue("@maternity", mleave);
+                cmd1.ExecuteNonQuery();
+                cmd1.Dispose();
+            }
+            if (ltype == "Paternity")
+            {
+                SqlCommand cmd1 = new SqlCommand(@"Update [dbo].[empleavetype]
+            SET [paternity] = @paternity WHERE [empid] = @empid", cnn);
+                pleave += nodays;
+                cmd1.Parameters.AddWithValue("@empid", empid);
+                cmd1.Parameters.AddWithValue("@paternity", pleave);
+                cmd1.ExecuteNonQuery();
+                cmd1.Dispose();
+            }
+
+            
             cmd.ExecuteNonQuery();
             cmd.Dispose();
-            Response.Write("<script>alert('Leave Cancelled')</script>");
             cnn.Close();
         }
     }

@@ -12,7 +12,7 @@
                        <Columns>
                            <asp:TemplateField HeaderText="Select">
                                <ItemTemplate>
-                                   <asp:CheckBox ID="CheckBox1" Text="Select" runat="server" />
+                                   <asp:CheckBox ID="CheckBox1" Text="" runat="server" />
                                </ItemTemplate>
                            </asp:TemplateField>
                            <asp:BoundField DataField="leaveid" HeaderText="Leave ID">

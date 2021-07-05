@@ -56,7 +56,7 @@
                     <tr>
                        <td>
                        <asp:Label ID="Label10" runat="server" Text="Other Deduction"></asp:Label>:</td><td>
-                           <asp:TextBox ID="od" runat="server" CssClass="tbox" type="number" placeholder="Enter other deduction amount"></asp:TextBox></td>
+                           <asp:TextBox ID="od" runat="server" CssClass="tbox" type="number" placeholder="Enter other deduction amount"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate ="od" CssClass="val" ErrorMessage="Other dedcution required 0 atleast"></asp:RequiredFieldValidator></td>
                    </tr>
                     <tr>
                        <td>

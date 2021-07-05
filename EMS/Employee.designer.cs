@@ -39,9 +39,9 @@ namespace EMS
     partial void Insertjobdetails(jobdetails instance);
     partial void Updatejobdetails(jobdetails instance);
     partial void Deletejobdetails(jobdetails instance);
-    partial void Insertempleave(empleave instance);
-    partial void Updateempleave(empleave instance);
-    partial void Deleteempleave(empleave instance);
+    partial void Insertempleaves(empleaves instance);
+    partial void Updateempleaves(empleaves instance);
+    partial void Deleteempleaves(empleaves instance);
     #endregion
 		
 		public EmployeeDataContext() : 
@@ -114,11 +114,11 @@ namespace EMS
 			}
 		}
 		
-		public System.Data.Linq.Table<empleave> empleaves
+		public System.Data.Linq.Table<empleaves> empleaves
 		{
 			get
 			{
-				return this.GetTable<empleave>();
+				return this.GetTable<empleaves>();
 			}
 		}
 	}
@@ -151,7 +151,7 @@ namespace EMS
 		
 		private EntitySet<empdetails> _empdetails1;
 		
-		private EntitySet<empleave> _empleaves;
+		private EntitySet<empleaves> _empleaves;
 		
 		private EntityRef<empdetails> _empdetail1;
 		
@@ -188,7 +188,7 @@ namespace EMS
 		public empdetails()
 		{
 			this._empdetails1 = new EntitySet<empdetails>(new Action<empdetails>(this.attach_empdetails1), new Action<empdetails>(this.detach_empdetails1));
-			this._empleaves = new EntitySet<empleave>(new Action<empleave>(this.attach_empleaves), new Action<empleave>(this.detach_empleaves));
+			this._empleaves = new EntitySet<empleaves>(new Action<empleaves>(this.attach_empleaves), new Action<empleaves>(this.detach_empleaves));
 			this._empdetail1 = default(EntityRef<empdetails>);
 			this._deptdetails = default(EntityRef<deptdetails>);
 			this._jobdetails = default(EntityRef<jobdetails>);
@@ -421,7 +421,7 @@ namespace EMS
 		}
 		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="empdetails_empleave", Storage="_empleaves", ThisKey="empid", OtherKey="empid")]
-		public EntitySet<empleave> empleaves
+		public EntitySet<empleaves> empleaves
 		{
 			get
 			{
@@ -567,13 +567,13 @@ namespace EMS
 			entity.empdetail1 = null;
 		}
 		
-		private void attach_empleaves(empleave entity)
+		private void attach_empleaves(empleaves entity)
 		{
 			this.SendPropertyChanging();
 			entity.empdetails = this;
 		}
 		
-		private void detach_empleaves(empleave entity)
+		private void detach_empleaves(empleaves entity)
 		{
 			this.SendPropertyChanging();
 			entity.empdetails = null;
@@ -1283,7 +1283,7 @@ namespace EMS
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.empleaves")]
-	public partial class empleave : INotifyPropertyChanging, INotifyPropertyChanged
+	public partial class empleaves : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -1336,7 +1336,7 @@ namespace EMS
     partial void OnstatusChanged();
     #endregion
 		
-		public empleave()
+		public empleaves()
 		{
 			this._empdetails = default(EntityRef<empdetails>);
 			OnCreated();

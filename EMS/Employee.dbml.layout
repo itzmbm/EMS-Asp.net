@@ -68,7 +68,7 @@
       </nodes>
     </associationConnector>
     <classShape Id="b999f01f-6c44-4ffc-95d5-e62569ea0c6d" absoluteBounds="5.75, 0.75, 2, 2.7324039713541666">
-      <DataClassMoniker Name="/EmployeeDataContext/empleave" />
+      <DataClassMoniker Name="/EmployeeDataContext/empleaves" />
       <nestedChildShapes>
         <elementListCompartment Id="13de24ed-f166-464c-b6b5-7e2dc6f33703" absoluteBounds="5.765, 1.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
