@@ -10,7 +10,7 @@
                  <div class="flip-card-front">
             <h3>Pending Leaves</h3>
             <section  class="sec">
-                <img src="images/profile.png" class="icn" /><br />
+                <img src="images/pending.png" class="icn" /><br />
             <asp:Label ID="totalVP" runat="server" cssClass="labl" Text=""></asp:Label><br />
                 </section>
                  </div>

@@ -105,7 +105,7 @@ namespace EMS
             string ConnectionString = @"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = emp; Integrated Security = True";
             SqlConnection cnn = new SqlConnection(ConnectionString);
             cnn.Open();
-            SqlCommand check_User_ID = new SqlCommand("SELECT * FROM empleaves  WHERE ([empid] = @empid) and ([status]=@stat) and ([fromdate]=@fromdate) or ([tilldate]=@tilldate) ", cnn);
+            SqlCommand check_User_ID = new SqlCommand("SELECT * FROM empleaves  WHERE ([empid] = @empid) and ([status]=@stat) and ([fromdate]=@fromdate) or ([tilldate]=@tilldate) or ([fromdate]=@tilldate) or ([tilldate]=@fromdate)", cnn);
             check_User_ID.Parameters.AddWithValue("@empid", eid);
             check_User_ID.Parameters.AddWithValue("@fromdate", fd);
             check_User_ID.Parameters.AddWithValue("@tilldate", td);
