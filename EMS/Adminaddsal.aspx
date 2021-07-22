@@ -21,7 +21,8 @@
                    <tr>
                        <td>
                        <asp:Label ID="Label3" runat="server" Text="Basic-Salary"></asp:Label>:</td><td>
-                           <asp:TextBox ID="bsal" runat="server" CssClass="tbox" type="number" placeholder="Enter Basic Salary amount"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate ="bsal" CssClass="val" ErrorMessage="Basic Salary required" Display="Dynamic"></asp:RequiredFieldValidator></td>
+                           <asp:TextBox ID="bsal" runat="server" CssClass="tbox" type="number" placeholder="Enter Basic Salary amount"></asp:TextBox>
+                           <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate ="bsal" CssClass="val" ErrorMessage="Basic Salary required" Display="Dynamic"></asp:RequiredFieldValidator></td>
                    </tr>
                    <tr>
                        <td>
@@ -56,7 +57,7 @@
                     <tr>
                        <td>
                        <asp:Label ID="Label10" runat="server" Text="Other Deduction"></asp:Label>:</td><td>
-                           <asp:TextBox ID="od" runat="server" CssClass="tbox" type="number" placeholder="Enter other deduction amount"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate ="od" CssClass="val" ErrorMessage="Other dedcution required 0 atleast"></asp:RequiredFieldValidator></td>
+                           <asp:TextBox ID="od" runat="server" CssClass="tbox" type="number" placeholder="Enter other deduction amount"></asp:TextBox><asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate ="od" CssClass="val" ErrorMessage="OD required enter 0 atleast"></asp:RequiredFieldValidator></td>
                    </tr>
                     <tr>
                        <td>

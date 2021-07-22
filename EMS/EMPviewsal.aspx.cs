@@ -2,6 +2,9 @@
 using System.Data;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using iTextSharp.text.html.simpleparser;
 
 namespace EMS
 {
@@ -62,6 +65,29 @@ namespace EMS
 
         protected void Print(object sender, EventArgs e)
         {
+            PdfPTable pdfTable = new PdfPTable(GridView1.HeaderRow.Cells.Count);
+            foreach(GridViewRow gridviewRow in GridView1.Rows)
+            {
+                Font font = new Font();
+                font.Color = new BaseColor(GridView1.RowStyle.ForeColor);
+                foreach(TableCell tableCell in gridviewRow.Cells)
+                {
+                    PdfPCell pdfCell = new PdfPCell(new Phrase(tableCell.Text));
+                    pdfCell.BackgroundColor = new BaseColor(GridView1.RowStyle.BackColor);
+                    pdfTable.AddCell(pdfCell);
+                }
+            }
+            Document pdfDocument = new Document(PageSize.A4, 10f, 10f, 10f, 10f);
+            PdfWriter.GetInstance(pdfDocument, Response.OutputStream);
+            pdfDocument.Open();
+            pdfDocument.Add(pdfTable);
+            pdfDocument.Close();
+
+            Response.ContentType = "application/pdf";
+            Response.AppendHeader("content-disposition", "attachment;filename=SalaryPaySlip.pdf");
+            Response.Write(pdfDocument);
+            Response.Flush();
+            Response.End();
 
         }
     }

@@ -13,7 +13,27 @@ namespace EMS
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //string emid = empid.Text;
+            //EmployeeDataContext emp = new EmployeeDataContext();
+            //empdetails employee = (from s in emp.empdetails where s.empid.ToString() == emid select s).FirstOrDefault();
+            //if (employee != null)
+            //{
+            //    string jid = employee.jobid;
 
+            //    jobdetails job = (from s in emp.jobdetails where s.jobid.ToString() == jid select s).FirstOrDefault();
+            //    if (job != null)
+            //    {
+            //        int mnsal = job.minsal;
+            //        int mxsal = job.maxsal;
+            //        RangeValidator1.MaximumValue = mxsal.ToString();
+            //        RangeValidator1.MinimumValue = mnsal.ToString();
+            //        RangeValidator1.ErrorMessage = "Basic Salary should be within range";
+            //    }
+            //    else
+            //    {
+
+            //    }
+            //}
         }
         protected void Add_Click(object sender, EventArgs e)
         {
