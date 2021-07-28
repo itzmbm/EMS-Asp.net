@@ -94,5 +94,31 @@ h3{
 .icon {
     width: 25px;
     height: 25px;
+  
     filter: invert(50%);
+}
+.adddept {
+    display: flex;
+    margin-top: 150px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.wrapper1 {
+    min-width: 600px;
+    max-width: 1100px;
+    min-height: 250px;
+    max-height: 1000px;
+    position: relative;
+    padding-top: 10px;
+    margin-left: 40px;
+}
+.val{
+    color:red;
+}
+.tbox {
+    border: none;
+    border-bottom: 2px solid grey;
+}
+h2{
+    text-align:center;
 }

@@ -14,22 +14,20 @@ namespace EMS
         {
 
         }
-
-
         protected void lgntbn_Click(object sender, EventArgs e)
         {
-           
+
             SqlConnection con = new SqlConnection(@"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = emp; Integrated Security = True;");
             try
             {
                 string uid = userid.Text;
                 string pass = password.Text;
                 string ut = usertype.SelectedItem.Value.ToString();
-                if (ut.Equals("Admin")) 
+                if (ut.Equals("Admin"))
                 {
                     con.Open();
                     string qry = "select * from adminlog where username=@uid and password=@pass";
-                    
+
                     SqlCommand cmd = new SqlCommand(qry, con);
                     cmd.Parameters.AddWithValue("@uid", uid);
                     cmd.Parameters.AddWithValue("@pass", pass);
@@ -100,5 +98,4 @@ namespace EMS
         }
 
     }
-    
 }

@@ -11,35 +11,26 @@ namespace EMS
 {
 
 
-    public partial class Login
+    public partial class ForgotPassword
     {
 
         /// <summary>
-        /// usertype control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList usertype;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// txtEmailID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-
-        /// <summary>
-        /// userid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox userid;
+        protected global::System.Web.UI.WebControls.TextBox txtEmailID;
 
         /// <summary>
         /// RequiredFieldValidator2 control.
@@ -51,30 +42,21 @@ namespace EMS
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
 
         /// <summary>
-        /// password control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox password;
+        protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// RequiredFieldValidator3 control.
+        /// lblResetPassMsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
-
-        /// <summary>
-        /// lgntbn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button lgntbn;
+        protected global::System.Web.UI.WebControls.Label lblResetPassMsg;
     }
 }
