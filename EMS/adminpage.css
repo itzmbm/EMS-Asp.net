@@ -130,7 +130,14 @@ li {
     background: linear-gradient(to right, #F46723,#f37437); /*#FF5301 #F46723 #f37437*/
     perspective: 1000px;
 }
-
+.wrapper-sal {
+    min-width: 600px;
+    max-width: 700px;
+    min-height: 300px;
+    max-height: 800px;
+    position: relative;
+    padding-top: 10px;
+}
 
 .flip-card-inner {
     position: relative;
