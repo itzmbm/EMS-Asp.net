@@ -32,11 +32,35 @@
                        <SortedDescendingHeaderStyle BackColor="#15524A" />
                        
                    </asp:GridView>
-                   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:empConnectionString %>" SelectCommand="SELECT [leaveid], [empid], [empname], [fromdate], [tilldate], [nod], [leavetype], [reason], [status] FROM [empleaves] WHERE (([mngid] = @mngid) AND ([status] = @status))">
+                   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:empConnectionString %>" SelectCommand="SELECT [leaveid], [empid], [empname], [fromdate], [tilldate], [nod], [leavetype], [reason], [status] FROM [empleaves] WHERE (([mngid] = @mngid) AND ([status] = @status))" DeleteCommand="DELETE FROM [empleaves] WHERE [leaveid] = @leaveid" InsertCommand="INSERT INTO [empleaves] ([empid], [empname], [fromdate], [tilldate], [nod], [leavetype], [reason], [status]) VALUES (@empid, @empname, @fromdate, @tilldate, @nod, @leavetype, @reason, @status)" UpdateCommand="UPDATE [empleaves] SET [empid] = @empid, [empname] = @empname, [fromdate] = @fromdate, [tilldate] = @tilldate, [nod] = @nod, [leavetype] = @leavetype, [reason] = @reason, [status] = @status WHERE [leaveid] = @leaveid">
+                       <DeleteParameters>
+                           <asp:Parameter Name="leaveid" Type="Int32" />
+                       </DeleteParameters>
+                       <InsertParameters>
+                           <asp:Parameter Name="empid" Type="String" />
+                           <asp:Parameter Name="empname" Type="String" />
+                           <asp:Parameter DbType="Date" Name="fromdate" />
+                           <asp:Parameter DbType="Date" Name="tilldate" />
+                           <asp:Parameter Name="nod" Type="Int32" />
+                           <asp:Parameter Name="leavetype" Type="String" />
+                           <asp:Parameter Name="reason" Type="String" />
+                           <asp:Parameter Name="status" Type="String" />
+                       </InsertParameters>
                        <SelectParameters>
                            <asp:SessionParameter Name="mngid" SessionField="tmid" Type="String" />
                            <asp:Parameter DefaultValue="Rejected" Name="status" Type="String" />
                        </SelectParameters>
+                       <UpdateParameters>
+                           <asp:Parameter Name="empid" Type="String" />
+                           <asp:Parameter Name="empname" Type="String" />
+                           <asp:Parameter DbType="Date" Name="fromdate" />
+                           <asp:Parameter DbType="Date" Name="tilldate" />
+                           <asp:Parameter Name="nod" Type="Int32" />
+                           <asp:Parameter Name="leavetype" Type="String" />
+                           <asp:Parameter Name="reason" Type="String" />
+                           <asp:Parameter Name="status" Type="String" />
+                           <asp:Parameter Name="leaveid" Type="Int32" />
+                       </UpdateParameters>
                    </asp:SqlDataSource>
                  </div>
         </div>

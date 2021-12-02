@@ -31,9 +31,10 @@
                        <SortedDescendingHeaderStyle BackColor="#15524A" />
                    </asp:GridView>
 
-                   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:empConnectionString %>" SelectCommand="SELECT [leaveid], [empid], [empname], [fromdate], [tilldate], [nod], [leavetype], [reason], [status] FROM [empleaves] WHERE ([mngid] = @mngid)">
+                   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:empConnectionString %>" SelectCommand="SELECT [leaveid], [empid], [empname], [fromdate], [tilldate], [nod], [leavetype], [reason], [status] FROM [empleaves] WHERE (([mngid] = @mngid) AND ([status] = @status))">
                        <SelectParameters>
                            <asp:SessionParameter Name="mngid" SessionField="tmid" Type="String" />
+                           <asp:Parameter DefaultValue="Approved" Name="status" Type="String" />
                        </SelectParameters>
                    </asp:SqlDataSource>
                  </div>
